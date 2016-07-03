@@ -24,7 +24,7 @@ steam.styles
     
     dark_blue "2 15 23 255" //not modified
 		med_blue "255 127 0 255" //not modified
-		bg_blue "10 36 56 255" //not modified
+		bg_blue "10 36 56 255" //progressbar
     
     // control colors
     bordercolor="153 153 153 255"
@@ -40,7 +40,7 @@ steam.styles
     ButtonFace="153 153 153 200"
     ButtonFace2="175 175 175 255" // for use in main client list panel column header, some button states
     ButtonFace3="163 163 163 255" // button cornering pixels
-    ButtonFaceDisabled="153 153 153 15"
+    ButtonFaceDisabled="153 153 153 255"
     ButtonFaceHover="156 156 156  240"   /// hover!
     ButtonFaceActive="153 153 153  240"  // not sure what this state is...
     ButtonFaceFocus="150 150 150  240"  //  keyboard focus
@@ -70,11 +70,23 @@ steam.styles
     NavLabel="102 102 102 255"
     Label="255 152 31 255"
 	
+	MindiGameListName="0 0 0 255" 	// Gamelist Group Name
+	MindiGameList="236 236 236 255" // Gamelist Group BG
+	MindiBorder="1 1 1 255" 		// Border
 	Mindi="255 152 31 255"
 	Mindi2="77 77 77 255"
     Label2="144 144 144 255"
     LabelDisabled="140 140 140 255"
     LabelFocus="59 59 59 255"
+	
+	MindiLink="255 152 31 255"
+	
+	MindiListGames0="137 137 137 255"
+	MindiListGames1="49 49 49 255"
+	MindiListGames1b="0 0 0 255"
+	MindiListGames2="255 114 0 255"
+	MindiListGames2b="255 90 0 255"
+	
 
     SuperNav="white"
     SuperNavHover="white"
@@ -88,8 +100,8 @@ steam.styles
     HeaderClient="202 202 202 255" // the color of the List box header in the main client window
     HeaderDialog="163 163 163 255" // the color of the list box header in other windows
     
-    TitleBar="255 255 255 80"
-    TitleBarFocus="255 255 255 80"
+    TitleBar="255 255 255 0"
+    TitleBarFocus="255 255 255 0"
     MenuBG="255 255 255 255"
     
     Focus="255 152 31 255" // background color of any selected menu or list item
@@ -110,10 +122,11 @@ steam.styles
     WhiteWolf="255 255 255 255"
     WhiteWolf2="255 255 255 255"
 
-    BackgroundStartSubtle="255 255 255 155" 
-    BackgroundStartSubtle="255 255 255 45" [$OSX]
-    BackgroundStartSubtlest="255 255 255 100"
-    BackgroundStart="255 255 255 180"
+	BackgroundName="255 255 255 255" // Game name/play bg
+    BackgroundStartSubtle="255 255 255 255" 
+    BackgroundStartSubtle="255 255 255 255" [$OSX]
+    BackgroundStartSubtlest="255 255 255 255"
+    BackgroundStart="255 255 255 255"
     BackgroundStartOpaque="255 255 255 255"
     
     ClientBG="255 255 255 255"
@@ -173,9 +186,13 @@ steam.styles
 		green7 "103 128 13 255"   //not modified
 		green8 "38 48 2 255" //NOT MODIFIED
 
-		launch0 "175 175 175 255"   //not modified
-		launch1 "153 153 153  255"   //not modified
-		launch2 "197 197 197 255"   //not modified
+		
+		// Edited Button colors
+		launch0 "175 175 175 255"   // not modified
+		launch1 "190 190 190 255"   // Button normal state
+		launch2 "153 153 153 255"  	// Button on use
+		launch3 "255 152 31 255"   	// Button normal state install/buy
+		launch4 "255 138 0 255"   	// Button on use install/buy
 
 
 		parental_lock_inactive1 "154 49 48 255"  //not modified
@@ -366,7 +383,7 @@ steam.styles
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
+				0="gradient( x0, y0, x1, y1, launch1, launch1 )"
 			}
 	  }
 	 
@@ -375,7 +392,7 @@ steam.styles
 		render_bg
 		{
 			// background fill
-			0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"	
+			0="gradient( x0, y0, x1, y1, launch1 , launch1 )"	
 		}
     }
     
@@ -385,7 +402,7 @@ steam.styles
   		render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"             
+        0="gradient( x0, y0, x1, y1, launch2, launch2 )"             
       }
     }
 
@@ -395,7 +412,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, launch2, launch2 )"
       }
     }
     
@@ -404,7 +421,7 @@ steam.styles
 			textcolor="TextHover"
 			render_bg
 	      {
-	        0="gradient( x0, y0, x1, y1, buttonfacefocus, propertysheetbg )"			    
+	        0="gradient( x0, y0, x1, y1, launch2, launch2 )"			    
 	      }
     }
     
@@ -413,7 +430,7 @@ steam.styles
       textcolor="TextHover"
       render_bg
       {     
-        0="gradient( x0, y0, x1, y1,  buttonfacefocus, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1,  launch2, launch2 )"
       }
     }
     
@@ -423,7 +440,7 @@ steam.styles
        render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, launch2, launch2 )"
       }
     }
     
@@ -433,7 +450,7 @@ steam.styles
        render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, launch2, launch2 )"
       }
     }
     
@@ -443,7 +460,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactivefocus, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, launch2, launch2 )"
       }
     }
 
@@ -453,7 +470,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactivefocus, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, launch2, launch2 )"
       }
     }
     
@@ -1143,51 +1160,51 @@ steam.styles
   
     "GameItem_Uninstalled"
     {
-      textcolor="labeldisabled"
-      selectedtextcolor="label"
+      textcolor="MindiListGames0"
+      selectedtextcolor="MindiListGames1"
     }
     "GameItem_Uninstalled:hover"
     {
-      textcolor="label"
-      selectedtextcolor="label"
+      textcolor="MindiListGames2b"
+      selectedtextcolor="MindiListGames1b"
     }
  
     "GameItem_Installed"
     {
-      textcolor="text"
-      selectedtextcolor="white"
+      textcolor="MindiListGames1"
+      selectedtextcolor="MindiListGames1"
       }
       
     "GameItem_Installed:hover"
     {
-      textcolor="white"
-      selectedtextcolor="white"
+      textcolor="MindiListGames2b"
+      selectedtextcolor="MindiListGames1b"
     }
     
 	
     "GameItem_Running"
     {
-      textcolor="Friends.InGameColor"
-      selectedtextcolor="white"
+      textcolor="MindiListGames2"
+      selectedtextcolor="MindiListGames2"
     }
     
     "GameItem_Running:hover"
     {
-      textcolor="white"
-      selectedtextcolor="white"
+      textcolor="MindiListGames2b"
+      selectedtextcolor="MindiListGames2"
     }
     
 	
     "GameItem_Shortcut"
     {
-      textcolor="text"
-      selectedtextcolor="white"
+      textcolor="MindiListGames1"
+      selectedtextcolor="MindiListGames1"
     }
       
     "GameItem_Shortcut:hover"
     {
-        textcolor="white"
-        selectedtextcolor="white"
+        textcolor="MindiListGames2b"
+        selectedtextcolor="MindiListGames2"
     }
     
     "GameItem_Mod"
@@ -1198,62 +1215,62 @@ steam.styles
       
     "GameItem_Mod:hover"
     {
-        textcolor="white"
-        selectedtextcolor="white"
+        textcolor="MindiListGames2b"
+        selectedtextcolor="MindiListGames2"
     }
 
     "GameItem_Updating"
     {
-    	textcolor="highlight2"
-    	selectedtextcolor="highlight1"
+    	textcolor="MindiListGames2"
+    	selectedtextcolor="MindiListGames2"
     }
     
     "GameItem_Updating:hover"
     {
-    	textcolor="highlight1"
-    	selectedtextcolor="highlight1"
+    	textcolor="MindiListGames2b"
+    	selectedtextcolor="MindiListGames2"
     }
     
     "GameItem_Updating:selected"
     {
-    	textcolor="highlight1"
-    	selectedtextcolor="highlight1"
+    	textcolor="MindiListGames2"
+    	selectedtextcolor="MindiListGames2"
     }
     
     "GameItem_Decrypting"
     {
-    	textcolor="highlight2"
-    	selectedtextcolor="highlight1"
+    	textcolor="MindiListGames2"
+    	selectedtextcolor="MindiListGames2"
     }
     
     "GameItem_Decrypting:hover"
     {
-    	textcolor="highlight1"
-    	selectedtextcolor="highlight1"
+    	textcolor="MindiListGames2b"
+    	selectedtextcolor="MindiListGames2b"
     }
     
     "GameItem_Decrypting:selected"
     {
-    	textcolor="highlight1"
-    	selectedtextcolor="highlight1"
+    	textcolor="MindiListGames2"
+    	selectedtextcolor="MindiListGames2"
     }
     
     "GameItem_Syncing"
     {
-    	textcolor="highlight2"
-    	selectedtextcolor="highlight1"
+    	textcolor="MindiListGames2"
+    	selectedtextcolor="MindiListGames2"
     }
     
     "GameItem_Syncing:hover"
     {
-    	textcolor="highlight1"
-    	selectedtextcolor="highlight1"
+    	textcolor="MindiListGames2b"
+    	selectedtextcolor="MindiListGames2b"
     }
     
     "GameItem_Syncing:selected"
     {
-    	textcolor="highlight1"
-    	selectedtextcolor="highlight1"
+    	textcolor="MindiListGames2"
+    	selectedtextcolor="MindiListGames2"
     }
     
     "GameColumn_BigText"
