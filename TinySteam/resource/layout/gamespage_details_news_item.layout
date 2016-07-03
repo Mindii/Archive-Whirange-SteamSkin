@@ -30,12 +30,12 @@
 		date_and_author
 		{
 			font-size=14
-			textcolor="Mindi"
+			textcolor="label2"
 		}
 
 		newsitem_body
 		{
-			textcolor="Mindi2"
+			textcolor="Label"
 			selectedtextcolor="Label"	
 			render_bg {}
 			font-size=15

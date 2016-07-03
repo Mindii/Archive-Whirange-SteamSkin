@@ -55,7 +55,7 @@
 			}
 			render_bg
 			{
-				 0="gradient( x0+2, y0+2, x1-1, y1 - 1, almostblack, almostblack )"
+				 0="gradient( x0+2, y0+2, x1-1, y1 - 1, dialogbg, almostblack )"
 			}
 		}
 		
@@ -131,7 +131,7 @@
 		DetailsBorderPanel
 		{
 			
-			bgcolor = "255 255 255 255"
+			bgcolor = "0 0 0 255"
 			render 
 			{
 

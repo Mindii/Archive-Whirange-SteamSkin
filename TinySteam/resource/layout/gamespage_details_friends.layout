@@ -4,7 +4,7 @@
 	{
 		friendsdetails { controlname="CGamesPage_Details_Friends" style="friendsdetails" }
 		
-		headerlabel { controlname="label" style="gamedetails-headerlabel" labeltext="#Steam_Friends" }
+		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Friends" }
 		listplayingnow	{ controlname="CGamesPage_Details_Friends_List" }
 		listplayever	{ controlname="CGamesPage_Details_Friends_List" }
 
@@ -26,7 +26,7 @@
 		infolabel
 		{
 			font-size=16
-			textcolor=Mindi2
+			textcolor=Label
 		}	
 		
 		friendlabelmore

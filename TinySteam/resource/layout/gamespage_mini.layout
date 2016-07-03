@@ -191,7 +191,7 @@
 			render_bg 
 			{
 				// background gradient
-				0="gradient( x0+1, y0+1, x1-2, y0 + 149, AlmostBlack, AlmostBlack )"
+				0="gradient( x0+1, y0+1, x1-2, y0 + 149, none, AlmostBlack )"
 				1="fill( x0+1, y0 + 149, x1-2, y1, AlmostBlack )" 
 
 			}

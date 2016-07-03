@@ -20,35 +20,37 @@
 		// right-mid column
 		downloadtotallabel	{ controlname="Label"	labelText="#steam_downloads_gamesize_update" style="label2" }
 		downloadtotalfield	{ controlname="Label"	labelText="%download_totals%" style="label" style="label" }
-		starttimelabel	{ controlname="Label"	labelText="#steam_downloads_initiated" style=Label2  group="ShowWhileDownloading"}
-		starttimefield	{ controlname="Label"	labelText="%time_started%" style=Label  group="ShowWhileDownloading"}
+		starttimelabel		{ controlname="Label"	labelText="#steam_downloads_initiated" style=Label2  group="ShowWhileDownloading"}
+		starttimefield		{ controlname="Label"	labelText="%time_started%" style=Label  group="ShowWhileDownloading"}
 		timeremaininglabel	{ controlname="Label"	labelText="#steam_downloads_timeremaining" style="label2" group="ShowWhileDownloading" }
 		timeremainingfield	{ controlname="Label"	labelText="%time_remaining%"  style="label" group="ShowWhileDownloading" }
 		timecompletedlabel	{ controlname="Label"	labelText="#steam_downloads_timecompleted" style="label2" group="ShowWhenComplete" }
 		timecompletedfield	{ controlname="Label"	labelText="%time_completed%"  style="label" group="ShowWhenComplete" }
+		pausereasonlabel	{ controlname="Label"	labelText="#steam_downloads_pausedreason" style="label2" group="ShowWhenPaused" }
+		pausereasonfield	{ controlname="Label"	labelText="" style="label3" group="ShowWhenPaused" }
 		
 
 		// right column
-		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_suspended" style=ModuleHeading2 }
+		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_suspended" style=ModuleHeading2 tooltiptext="" }
 		removefromqueuebutton	{ controlname="Button" style="SmRemoveButton" tooltiptext="#steam_downloads_remove" }
 		topofqueuebutton	{ controlname="Button" style="topOfQueueButton" tooltiptext="#steam_downloads_topofqueue" group="HideOnCompletion" }
 		newslink			{ controlname="URLlabel"	style="links"		labelText="#steam_downloads_updatenews" }
 
 	
 		
-	}
+	} 
 	
 	colors
 	{
-		dark_blue_grad = "106 183 231 255" 
-		light_blue_grad = "106 183 231 255" 
+		dark_blue_grad = "12 27 38 255"
+		light_blue_grad = "32 72 102 255"
 	}
 	
 	styles
 	{
 		panelStyle
 		{
-			bgcolor=DarkClientBG 
+			bgcolor=none
 			
 		}
 		
@@ -57,7 +59,7 @@
 			render_bg
 			{
 				0="gradient( x0, y0, x1, y1, dark_blue_grad, light_blue_grad )"
-				//2="image( x0, y0 - 55, x1, y1+8, graphics/clienttexture2b)"
+				2="image( x0, y0 - 55, x1, y1+8, graphics/clienttexture2b)"
 			}			
 		}
 
@@ -65,7 +67,7 @@
 		{
 			font-size=14
 			font-style=normal
-			textcolor="Highlight5b"
+			textcolor="text"
 			font-family=basefont
 			font-style="uppercase"
 			padding-left=0
@@ -77,7 +79,7 @@
 		{
 			font-size=14
 			font-style=normal
-			textcolor="Highlight5a"
+			textcolor="white"
 			font-family=basefont
 			font-style="uppercase"
 			padding-left=0
@@ -94,7 +96,7 @@
 		{
 			font-size=14
 			font-style=normal
-			textcolor="Highlight5b"
+			textcolor="text"
 			font-family=basefont
 			padding-left=0
 			padding-top=0
@@ -105,7 +107,7 @@
 		{
 			font-size=14
 			font-style=normal
-			textcolor="Highlight5a"
+			textcolor="white"
 			font-family=basefont
 			padding-left=0
 			padding-top=0
@@ -122,15 +124,22 @@
 			textcolor=TextHover
 		}
 		
-
 		label2
 		{
 			bgcolor			none
 			font-size		"14"
-			textcolor		"med_blue"
+			textcolor		"label2"
 			padding-top		"0"
 			font-style="uppercase"
-
+		}
+		
+		label3
+		{
+			bgcolor			none
+			font-size		"14"
+			textcolor		"label"
+			padding-top		"0"
+			font-style="uppercase"
 		}
 
 		ModuleHeading
@@ -138,7 +147,7 @@
 			font-family	basefont
 			bgcolor="none"
 			font-size	"18"
-			textcolor	"med_blue"
+			textcolor	"text"
 			padding-top	"0"
 			font-weight	"700"
 		}	
@@ -148,14 +157,14 @@
 			font-family	basefont
 			bgcolor="none"
 			font-size	"18"
-			textcolor	"med_blue"
+			textcolor	"label"
 			padding-top	"0"
 			font-weight	"400"
 		}								
 		
 		panelBgColorActive
 		{
-			bgcolor=		"DarkClientBG"
+			bgcolor=		"clientbg"
 		}
 
 				
@@ -190,7 +199,7 @@
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="Text"
+			textcolor="white"
 			font-style="uppercase"
 			bgcolor=none
 
@@ -201,7 +210,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0-1, x1, y1, buttonface2, propertysheetbg )"
+				0="gradient( x0, y0-1, x1, y1, launch1, launch2 )"
 
 
 		
@@ -214,7 +223,7 @@
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="TextHover"
+			textcolor="white"
 			font-style=uppercase
 			bgcolor=none   
 
@@ -225,7 +234,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0-1, x1, y1, buttonfaceactive, propertysheetbg )"
+				0="gradient( x0, y0-1, x1, y1, launch0, launch2 )"
 
 
 			}	
@@ -317,12 +326,13 @@
 			{
 			}    
 		}
-	}
+	} 
 
 
 	layout
 	{
-		region	{ name="bottom" width="1262" y=75 height=60 width=400 }
+		region { name="bottom" y=75 height=60 width=400 }
+		  
 		region { name="column1" x=0 width=200 }
 		region { name="column2" x=210 width=max }
 		region { name="column3" x=500 width=max }
@@ -341,8 +351,9 @@
 
 		// right-mid column
 		place { control="downloadtotallabel,downloadtotalfield" region="column3" x=0 align=top margin-top=43 spacing=6 }
-		place { control="starttimelabel,starttimefield" region="column3" dir="right" align=top spacing=6 margin-top=63 x=0 }
+		place { control="starttimelabel,starttimefield" 				region="column3" x=0 align=top margin-top=63 spacing=6 }
 		place { control="timecompletedlabel,timecompletedfield" region="column3" x=0 align=top margin-top=63 spacing=6 }
+		place { control="pausereasonlabel,pausereasonfield" 		region="column3" x=0 align=top margin-top=63 spacing=6 }
 		place { control="timeremaininglabel,timeremainingfield" region="column3" x=0 align=top margin-top=83 spacing=6 }
 				
 		// right column
