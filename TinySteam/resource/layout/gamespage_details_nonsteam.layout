@@ -9,7 +9,7 @@
 
 	colors
 	{
-		BackgroundStart="235 235 235 170"
+		BackgroundStart="20 20 20 170"
 		RichText.InsetX "0"
 		RichText.InsetY "3"
 		GameDetailsNonSteam.ExtraVerticalSpacing "44"

@@ -52,7 +52,6 @@
 		mostrecent_unlockedsofar
 		{
 			font-size=15
-			textcolor="Mindi2"
 		}
 
 		progressbackground

@@ -38,7 +38,7 @@
 			render_bg {
 
 				// background gradient        
-				0="gradient( x0+1, y0, x1-1, y1-2, almostblack, almostblack )"
+				0="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
 				
 
 				
