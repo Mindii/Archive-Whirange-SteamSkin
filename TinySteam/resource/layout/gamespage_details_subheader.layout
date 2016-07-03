@@ -17,7 +17,7 @@
 	{
 		CDetailsGameSubHeaderPanel
 		{
-			bgcolor=backgroundstartsubtle
+			bgcolor=backgroundName
 		}
 		
 		
@@ -31,7 +31,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0+2, y0+1, x1, y1-1, launch1, launch2 )"
+				0="gradient( x0+2, y0+1, x1, y1-1, launch1, launch1 )"
 			}
 			render
 			{
@@ -46,7 +46,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0+2, y0+1, x1, y1-1, launch0, launch2 )"
+				0="gradient( x0+2, y0+1, x1, y1-1, launch2, launch2 )"
 			}
 			render
 			{
@@ -61,7 +61,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0+2, y0+1, x1, y1-1, focus, launch2 )"
+				0="gradient( x0+2, y0+1, x1, y1-1, launch2, launch2 )"
 			}
 			render
 			{
@@ -76,7 +76,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0+2, y0+1, x1, y1-1, focus, launch2 )"
+				0="gradient( x0+2, y0+1, x1, y1-1, launch2, launch2 )"
 			}
 			render
 			{
@@ -156,7 +156,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch1, launch2 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch1, launch1 )"
 
 
 			}	
@@ -179,7 +179,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch0, launch2 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch2, launch2 )"
 
 
 			}	
@@ -201,7 +201,7 @@
 			render_bg
 			{
         // background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch2, launch2 )"
 			}
 		}
 		
@@ -223,7 +223,7 @@
 			render_bg
 			{
        				 // background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch2, launch2 )"
 			}	
 		}
 				
@@ -244,7 +244,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch1, launch2 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch3, launch3 )"
 
 
 			}	
@@ -267,7 +267,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch0, launch2 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch4, launch4 )"
 			}	
 		}
 		
@@ -288,7 +288,7 @@
 			render_bg
 			{
        				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"           
+				0="gradient( x0, y0+1, x1, y1-1, launch4, launch4 )"           
 			}
 		}
 		
@@ -310,7 +310,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch4, launch4 )"
 			}	
 		}
 		
@@ -332,7 +332,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch1, launch2 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch3, launch3 )"
 
 			}	
 		}
@@ -354,7 +354,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0+1, x1, y1-1, launch0, launch2 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch4, launch4 )"
 
 
 			}	
@@ -377,7 +377,7 @@
 			render_bg
 			{
         			// background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch4, launch4 )"
 			}	
 		}
 		
@@ -398,7 +398,7 @@
 			render_bg
 			{     
         			// background fill
-				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch4, launch4 )"
 			}
 		}
 	}

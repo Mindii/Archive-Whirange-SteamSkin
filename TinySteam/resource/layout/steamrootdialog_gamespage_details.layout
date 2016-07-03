@@ -117,11 +117,11 @@
 		ListPanelSectionHeader
 		{     
 			inset="2 0 0 0"
-			textcolor=label
+			textcolor=MindiGameListName
 			font-style="uppercase"
 			render_bg
 			{
-				0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, propertysheetbg, Friends.ListHeaderFadeOut  )"
+				0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, MindiGameList, MindiGameList  )"
 			}    
 		} 
 
@@ -140,7 +140,7 @@
 			render {}
 			render_bg 
 			{
-				0="gradient_horizontal( x0+1, y0+2, x1, y1 + 1, ButtonFace, none )"
+				0="gradient_horizontal( x0+1, y0+2, x1, y1 + 1, MindiGameList, MindiGameList )"
 			}
 
 		}
@@ -232,7 +232,7 @@
 
 		rightcolumnlink:hover
 		{
-			textcolor=White
+			textcolor=MindiLink
 		}
 
 		rightcolumnlink:disabled
