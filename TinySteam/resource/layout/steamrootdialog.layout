@@ -11,7 +11,22 @@
 			command="fullscreen"
 			tooltiptext="#tooltip_view_fullscreen" 
 		}
-
+		
+		"startvr"
+		{
+			"ControlName"		"Button"
+			style="VRButton"
+      			command="url steam://run/250820"
+     			tooltiptext="#tooltip_view_vr_start" 
+		}
+    
+		"exitvr"
+		{
+			"ControlName"		"Button"
+			style="VRButtonExit"
+			command="exitvr"
+			tooltiptext="#tooltip_view_vr_exit" 
+		}
 		
 		"New"
 		{
@@ -88,13 +103,13 @@
 			style="AccountURLStyle"
 		}
 		
-
+		
 		account_balance
 		{
 			"ControlName"	"URLLabel"
 			"fieldName"		"account_balance"
 			"labelText"		""
-			"URLText"		"steam://url/StoreAccount/"
+			"URLText"		"steam://url/StoreWallet/"
 			style="AccountBalanceStyle"
 		}
 		
@@ -106,7 +121,6 @@
 			style="AccountBalanceSeparatorStyle"
 		}
 		
-
 		universe_label
 		{
 			ControlName=Label
@@ -171,7 +185,6 @@
 		}
 		
 		
-
 		new_label	
 		{			
 			bgcolor=none
@@ -338,7 +351,8 @@
 			render_bg
 			{
 				// top area and graphic
-				0="gradient( x0, y0, x1, y0+175, WhiteWolf, DialogBG )"
+
+				0="gradient( x0, y0, x1, y0+175, ClientBGTop, DialogBG )"
 				2="image( x0, y0, x1, y0+175, graphics/clienttexture2)"
 
 				3="fill( x0, y0+175, x0+20, y1-76, DialogBG )"			
@@ -350,7 +364,7 @@
 		}		
 
 	
- 
+
 
 		FrameTitle
 		{
@@ -658,10 +672,10 @@
 					1="fill( x0 + 1 , y0 + 140, x1 - 1, y1 - 1, MenuBG2  )"
 		
 					// lines around
-			2="gradient_horizontal( x0, y1-1, x1, y1, BlueBorder, BlueBorder )"    // bottom
-			3="gradient( x1-1, y0, x1, y1 , BlueBorder, BlueBorder )" // right
-			4="fill( x0, y0, x1, y0+1, BlueBorder )"  // top
-			5="fill( x0, y0, x0+1, y1, BlueBorder )" // left
+				2="fill( x0 + 1, y0, x1 - 1, y0 + 1, clientbg )"  // top
+				3="fill( x0 + 1, y1 - 1, x1 - 1, y1, clientbg )"  // bottom
+				4="fill( x0, y0 + 1, x0 + 1, y1 - 1, clientbg )"  // left
+				5="fill( x1 - 1, y0 + 1, x1, y1 - 1, clientbg )"  // right
 				}
 		}
 		parental_lock_button
@@ -739,7 +753,39 @@
 			padding-right=0
 			padding-bottom=0
 		}
-
+		
+		VRButton [!$OSX]
+		{
+			padding-left=0
+			padding-top=6 
+			padding-right=0
+			padding-bottom=0
+		}
+    
+		VRButton [$OSX]
+		{
+			padding-left=0
+			padding-top=3 
+			padding-right=0
+			padding-bottom=0
+		}
+		
+		VRButtonExit [!$OSX]
+		{
+			padding-left=0
+			padding-top=6 
+			padding-right=0
+			padding-bottom=0
+		}
+    
+		VRButtonExit [$OSX]
+		{
+			padding-left=0
+			padding-top=3 
+			padding-right=0
+			padding-bottom=0
+		}
+    
 		inboxmenuitem
 		{
 			textcolor=inbox_inactive_text
@@ -786,7 +832,7 @@
 			image="graphics/osx_win_dis"[$OSX]
 		}
     
-		FrameMinimizeButton:hover
+    FrameMinimizeButton:hover
 		{  
 			render_bg {}
 			bgcolor="none"
@@ -948,7 +994,6 @@
 			image="graphics/osx_win_dis" [$OSX]
 		}
 				
-
 	}
 	
 	colors
@@ -961,9 +1006,9 @@
 		inbox_active_text "text"
 		inbox_inactive_text "labeldisabled"
 
-		backdrop "255 255 255 255"
+		backdrop "20 20 20 255"
 		
-		disabledborder "220 220 220 255"
+		disabledborder "63 63 63 255"
 	}
 	
 	layout
@@ -976,16 +1021,20 @@
 		place { control="UIStatusPanel" width=max height=40 align=bottom  margin-bottom=18 }
 		
 		place [!$OSX] { control="MenuBar" align=top margin-top=5 margin-left=2 }
+				
+		place [!$OSX] { control="account_balance, account_balance_seperator, account_URL, universe_label, startvr, exitvr, fullscreen" align=right margin-top=12 margin-right=88 spacing=7 }	
+		place [$OSX]  { control="account_balance, account_balance_seperator, account_URL, universe_label, startvr, exitvr, fullscreen" align=right margin-top=12 margin-right=15 spacing=7 }
+	
+		place [!$OSX] { control="fullscreen" align=right y=7 height=20 spacing=0 margin-right=78 margin-top=1 width=30 }
+		place [$OSX] { control="fullscreen" align=right y=7 height=20 spacing=0 margin-right=8 margin-top=1 width=30 }
 		
+		place [!$OSX] { control="startvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
+		place [$OSX] { control="startvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
+	
+		place [!$OSX] { control="exitvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
+		place [$OSX] { control="exitvr" end-right="fullscreen" align=right margin-right=6 margin-top=1 }
 
-			
-		place [!$OSX] { control="account_balance, account_balance_seperator, account_URL, universe_label, fullscreen" align=right margin-top=12 margin-right=78 spacing=7 }	
-		place [$OSX]  { control="account_balance, account_balance_seperator, account_URL, universe_label, fullscreen" align=right margin-top=12 margin-right=15 spacing=7 }
-	
-		place [!$OSX] { control="fullscreen" align=right y=7 height=20 spacing=0 margin-right=78 margin-top=1 width=30 region="bigpicture"}
-		place [$OSX] { control="fullscreen" align=right y=7 height=20 spacing=0 margin-right=8 margin-top=1 width=30 region="bigpicture"}
-	
-		place { control="InboxButton" align=right end-right="account_balance" margin-top=4 margin-right=16 height=26 }
+  place { control="InboxButton" align=right end-right="account_balance" margin-top=4 margin-right=16 height=26 }
 		place { control="ParentalLockButton" align=right end-right="InboxButton" margin-top=7 margin-right=10 height=23 }
 		place { control="SupportAlert" align=right end-right="ParentalLockButton" margin-top=4 margin-right=10 height=26 }
 
