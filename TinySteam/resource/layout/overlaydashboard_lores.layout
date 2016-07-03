@@ -1,4 +1,4 @@
-"resource/layout/overlaydashboard.layout"
+"resource/layout/overlaydashboard_lores.layout"
 {
 	controls
 	{
@@ -16,15 +16,14 @@
 			controlname="EditablePanel"
 			style=topfade
 			zpos=-1
-			mouseinputenabled=0
 		}
 		BottomFadePanel
 		{
 			controlname="EditablePanel"
 			style=bottomfade
 			zpos=-1
-		}		
-		
+		}
+
 		GameName
 		{
 			controlname="Label"
@@ -43,26 +42,23 @@
 			image=			"resource/battery_bright"
 		}		
 		
-		CloseButton	{ controlname="URLLabel" labeltext="#Overlay_Taskbar_Close" style="OverlayURLLabel"}
-		HotkeyLabel { controlname="Label" labeltext="%hotkey%" style="hotkey" }	
-		HotkeyExplain { controlname="Label" labeltext="#Overlay_Hotkey_Explain" margin-left=4 style="LabelOverlay"}
+		CloseButton	{ controlname="URLLabel" labeltext="#Overlay_Taskbar_Close" }
+		HotkeyLabel { controlname="Label" labeltext="%hotkey%" style=hotkey }	
+		HotkeyExplain { controlname="Label" labeltext="#Overlay_Hotkey_Explain" margin-left=4 }	
 	}
 	
 	colors
 	{
-	
-	backgroundOverlayTop="38 37 35 140"
-  	Highlight2="80 154 191 255" 
-  
+		backgroundOverlayTop="38 37 35 140"
 	}
 	
 	styles
 	{
 		hotkey
 		{
-			font-size=14
+			//font-size=18
 			font-style=uppercase
-			textcolor=text2
+			textcolor=Text
 		}
 		topfade
 		{
@@ -75,7 +71,7 @@
 		{
 			render_bg
 			{
-				0="gradient( x0, y0, x1, y1, none, black )"
+				0="gradient( x0, y0, x1, y1, none, backgroundstartopaque )"
 			}
 		}	
 		overlaymain
@@ -86,55 +82,33 @@
 		topbar
 		{
 			font-size=36
-			
-			textcolor=text
+			textcolor=Label
 		}
-		detailsboxtitle
-		{
-				textcolor=Highlight2
-		}
-				
-		OverlayURLLabel
-				{
-			font-size=15
-			textcolor=text
-		}
-		
-		OverlayURLLabel:Hover
-				{
-			font-size=15
-			textcolor=white
-		}
-		
-		LabelOverlay
-				{
-			font-size=14
-			textcolor=text2
-		}		
 	}
 	
 	layout
 	{
-		region { name=overlay width=1010 align=top-center margin-top=10 margin-bottom=10 }
+		region { name=overlay width=1000 align=top-center margin-top=10 margin-bottom=10 margin-left=10 margin-right=10 }
 	
 		region	 { name="left" region=overlay width=400 height=max margin-top=10 align=left }
-		region	 { name="mid" region=overlay width=400 height=max margin-top=2 align=top-center }
+		region	 { name="mid" region=overlay width=400 height=max margin-top=10 align=top-center }
 		region	 { name="right" region=overlay width=400 height=max margin-top=10 align=right }
 		
-		region	{ name="detailpanels" region=overlay align=bottom width=max height=360 margin-bottom=100 }
-		region 	{ name="topbar" region=overlay width="max" height=50 }
-		region	{ name="taskbar" region=overlay width="max" height=75 align=bottom }
-		region	{ name="above_taskbar" region=overlay align=bottom width=max height=110 margin-bottom=75 }
-		region 	{ name="powermeter" region=above_taskbar align=right width=200 }
+		region	{ name="detailpanels" region=overlay align=bottom width=max height=400 margin-bottom=100 }
+		region { name="topbar" region=overlay width="max" height=50 }
+		region	 { name="taskbar" region=overlay width="max" height=75 align=bottom }
+		region	 { name="above_taskbar" region=overlay align=bottom width=max height=150 margin-bottom=75 }
+		region { name="powermeter" region=above_taskbar align=right width=200 }
 		
-		place { control="TopFadePanel" align=top width=max height=600 }
+		place { control="TopFadePanel" align=top width=max height=150 }
 		place { control="BottomFadePanel" align=bottom width=max height=130 }
 		
 		place { control="CloseButton" region=mid align=top-center }
 		place { control="HotkeyLabel,HotkeyExplain" region=mid align=top-center y=14 spacing=5 }
+			
 		
-		place { controls="gamename" region=topbar align=right width=400 }
-		
+		place { controls="gamename" region=topbar align=right width=440 }
+				
 		place { control="PowerMeterDim" region=powermeter align=right }
 		
 		place { control="TaskbarPanel" region=taskbar height=64 width=max }

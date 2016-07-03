@@ -57,12 +57,12 @@
 			font-weight=700
 			font-family=basefont
 			font-style=uppercase
-			textcolor=Highlight5b
+			textcolor=Label
 		}
 		
 		taskbar:hover
 		{
-			textcolor=Highlight5a
+			textcolor=Text
 		}
 		
 		view_friends
@@ -81,7 +81,7 @@
 
 		online_friends
 		{
-			textcolor="GameDetailsGreen"
+			textcolor="label2"
 			bgcolor="none"
 			font-family=basefont
 			font-size=14
