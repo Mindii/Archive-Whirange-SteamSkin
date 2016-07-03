@@ -40,6 +40,8 @@
 
 		// Body contents
 		welcomedetails { controlname="CGamesPage_Details_Welcome" zpos="1" }
+		rentaldetails { controlname="CGamesPage_Details_Rental" zpos="1" }
+		dlcdetails { controlname="CGamesPage_Details_DLC" zpos="1" }
 		friendsdetails { controlname="CGamesPage_Details_Friends" zpos="1" }
 		clouddetails { controlname="CGamesPage_Details_Cloud" zpos="1" }
 		communityfilesdetails { controlname="CGamesPage_Details_CommunityFiles" zpos="1" }
@@ -47,6 +49,7 @@
 		newsdetails { controlname="CGamesPage_Details_News" zpos="1" }
 		nonsteamdetails { controlname="CGamesPage_Details_NonSteam" zpos="1" }
 		screenshotsdetails { controlname="CGamesPage_Details_Screenshots" zpos="1" }
+		turnnotifications { controlname="CGamesPage_Details_TurnNotifications" zpos="1" visible="0" }
 
 		// Empty list contents
 		emptylisttext { controlname="RichText" style="emptylisttext" }
@@ -76,7 +79,7 @@
 						}
 			render_bg
 			{
-				 0="gradient( x0+2, y0+2, x1-1, y1 - 1, almostblack, almostblack )"
+				 0="gradient( x0+2, y0+2, x1-1, y1 - 1, dialogbg, almostblack )"
 				 //1="gradient( x0 +2, y0+2, x1-1, y0 + 20, backgroundstartsubtle, none )"
 			}
 		}
@@ -114,11 +117,11 @@
 		ListPanelSectionHeader
 		{     
 			inset="2 0 0 0"
-			textcolor=TextHover
+			textcolor=MindiGameListName
 			font-style="uppercase"
 			render_bg
 			{
-				0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, propertysheetbg, none  )"
+				0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, MindiGameList, MindiGameList  )"
 			}    
 		} 
 
@@ -137,7 +140,7 @@
 			render {}
 			render_bg 
 			{
-				0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, propertysheetbg, Friends.ListHeaderFadeOut  )"
+				0="gradient_horizontal( x0+1, y0+2, x1, y1 + 1, MindiGameList, MindiGameList )"
 			}
 
 		}
@@ -229,7 +232,7 @@
 
 		rightcolumnlink:hover
 		{
-			textcolor=White
+			textcolor=MindiLink
 		}
 
 		rightcolumnlink:disabled
@@ -281,7 +284,7 @@
 		// Body contents
 		place 
 		{ 
-			control=welcomedetails,friendsdetails,clouddetails,communityfilesdetails,achievementsdetails,newsdetails,nonsteamdetails,screenshotsdetails
+			control=welcomedetails,rentaldetails,turnnotifications,friendsdetails,achievementsdetails,dlcdetails,clouddetails,communityfilesdetails,newsdetails,nonsteamdetails,screenshotsdetails
 			region=detailsbody
 			dir=down
 			width=max

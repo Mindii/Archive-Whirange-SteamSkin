@@ -52,7 +52,7 @@
 		infolabel
 		{
 			font-size=16
-			textcolor=Mindi2
+			textcolor=Text
 		}	
 	}
 
