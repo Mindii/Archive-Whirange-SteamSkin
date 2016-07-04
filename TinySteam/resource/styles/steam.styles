@@ -69,25 +69,32 @@ steam.styles
     
     NavLabel="102 102 102 255"
     Label="255 152 31 255"
+	Label2="144 144 144 255"
+    LabelDisabled="140 140 140 255"
+    LabelFocus="59 59 59 255"
 	
+	// Main custom color block
 	MindiGameListName="0 0 0 255" 		// Gamelist Group Name
 	MindiGameList="255 255 255 255" 	// Gamelist Group BG color 1
 	MindiGameList2="255 255 255 0" 		// Gamelist Group BG color 2
 	MindiBorder="1 1 1 255" 			// Black Border
-	Mindi0="255 127 0 255"
+	MindiBar"255 152 31 255"			// Progressbar
+	Mindi0="255 127 0 255"				// Dark Orange
 	Mindi="255 152 31 255"				// Orange
 	Mindi2="77 77 77 255"				// Dark Grey
-    Label2="144 144 144 255"
-    LabelDisabled="140 140 140 255"
-    LabelFocus="59 59 59 255"
-	MindiLink="255 152 31 255"
+	Mindi3="240 240 240 255"			// Light Grey Listboxes
+	MindiLink="255 152 31 255"	
 	MindiListGames0="137 137 137 255"
 	MindiListGames1="49 49 49 255"
 	MindiListGames1b="0 0 0 255"
 	MindiListGames2="255 114 0 255"
 	MindiListGames2b="255 90 0 255"
+	launch0 "175 175 175 255"   		// not modified
+	launch1 "221 221 221 255"   		// Button normal state
+	launch2 "153 153 153 255"  			// Button on use
+	launch3 "255 152 31 255"   			// Button normal state install/buy
+	launch4 "255 138 0 255"   			// Button on use install/buy
 	
-
     SuperNav="white"
     SuperNavHover="white"
    
@@ -185,15 +192,6 @@ steam.styles
 		green6 "150 184 28 255"   //not modified
 		green7 "103 128 13 255"   //not modified
 		green8 "38 48 2 255" //NOT MODIFIED
-
-		
-		// Edited Button colors
-		launch0 "175 175 175 255"   // not modified
-		launch1 "190 190 190 255"   // Button normal state
-		launch2 "153 153 153 255"  	// Button on use
-		launch3 "255 152 31 255"   	// Button normal state install/buy
-		launch4 "255 138 0 255"   	// Button on use install/buy
-
 
 		parental_lock_inactive1 "154 49 48 255"  //not modified
 		parental_lock_inactive2 "189 79 79 255"	  //not modified
@@ -590,7 +588,7 @@ steam.styles
         render	{     	}  
 			render_bg {				
 					// background gradient        
-					1="gradient( x0, y0, x1, y1, almostblack, almostblack )"
+					1="gradient( x0, y0, x1, y1, Mindi3, Mindi3 )"
 				}
     } 
     
@@ -1089,8 +1087,8 @@ steam.styles
     
     Label
 		{
-		textcolor="Label"
-		selectedtextcolor="Text"
+		textcolor="Mindi2"
+		selectedtextcolor="Mindi0"
 		bgcolor="none"
 		font-family=basefont
 		font-size=14
@@ -1113,7 +1111,7 @@ steam.styles
 		render_bg 
 		{
 			// background gradient        
-			0="gradient( x0, y0, x1, y1, almostblack, almostblack )"
+			0="gradient( x0, y0, x1, y1, Mindi3, Mindi3 )"
 			//1="gradient( x0, y0, x1, y0 + 31, backgroundstartsubtle, none )"
 
 		}
@@ -1132,9 +1130,9 @@ steam.styles
     render_bg
     {     
  		// background fill
-    0="gradient( x0, y0, x1, y0 + 80, almostblack, almostblack )"
-    1="fill( x0, y0 + 80, x1, y1, almostblack )"
-    2="gradient( x0, y0, x1, y0 + 30, almostblack, none )"
+		0="gradient( x0, y0, x1, y0 + 80, Mindi3, Mindi3 )"
+		//1="fill( x0, y0 + 80, x1, y1, almostblack )"
+		//2="gradient( x0, y0, x1, y0 + 30, almostblack, none )"
 		}
 	}
     
@@ -1580,7 +1578,7 @@ steam.styles
 		render_bg 
 		{				
 			// background gradient        
-			0="gradient( x0, y0, x1, y1, almostblack, almostblack )"
+			0="gradient( x0, y0, x1, y1, Mindi3, Mindi3 )"
 		}
 	}
 	
@@ -1965,29 +1963,29 @@ steam.styles
          	
     ProgressBar
     {
-		textcolor="bg_blue"
+		textcolor="MindiBar"
 		bgcolor="none"
 		render
 		{
 			// lines around
-		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
-		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
-		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
-		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, Mindi2 )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, Mindi2 )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, Mindi2 )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, Mindi2 )"  // right
 		}   
 	}
     
 	"Page ProgressBar"
     {
-		textcolor="bg_blue"
+		textcolor="MindiBar"
 		bgcolor="none"
 		render
 		{
 			// lines around
-		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
-		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
-		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
-		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right  
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, Mindi2 )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, Mindi2 )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, Mindi2 )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, Mindi2 )"  // right  
 		}   
     }
 	
