@@ -57,17 +57,17 @@
 			font-weight=700
 			font-family=basefont
 			font-style=uppercase
-			textcolor=Label
+			textcolor=MindiWhite
 		}
 		
 		taskbar:hover
 		{
-			textcolor=Text
+			textcolor=Mindi0
 		}
 		
 		view_friends
 		{
-			textcolor="Text"
+			textcolor="MindiWhite"
 			bgcolor="none"
 			font-family=basefont
 			font-size=14
@@ -81,7 +81,7 @@
 
 		online_friends
 		{
-			textcolor="label2"
+			textcolor="Mindi"
 			bgcolor="none"
 			font-family=basefont
 			font-size=14

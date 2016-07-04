@@ -15,20 +15,21 @@
 	{
 		name
 		{
-			textcolor=text
+			textcolor=Mindi2
 			font-style="none"
 		}
 		name:hover
 		{
+			textcolor=Mindi0
 			font-style="underline"
 		}
 		Background
 		{
-			bgcolor="20 20 20 255"
+			bgcolor="Mindi3"
 		}
 		IconBackground
 		{
-			bgcolor="0 0 0 255"
+			bgcolor="Mindi3"
 		}
 	}
 

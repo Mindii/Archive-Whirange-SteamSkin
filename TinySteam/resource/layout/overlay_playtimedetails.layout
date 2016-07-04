@@ -24,12 +24,12 @@
 	{
 		Intro
 		{
-			textcolor=text
+			textcolor=Mindi
 		}
 		timeStrings
 		{
 			font-size="17"
-			textcolor="label"
+			textcolor="MindiWhite"
 			font-style="Uppercase"
 			font-family=basefont
 			font-weight=700

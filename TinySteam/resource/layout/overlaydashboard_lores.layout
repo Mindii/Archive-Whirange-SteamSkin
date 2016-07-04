@@ -49,7 +49,6 @@
 	
 	colors
 	{
-		backgroundOverlayTop="38 37 35 140"
 	}
 	
 	styles
@@ -58,31 +57,31 @@
 		{
 			//font-size=18
 			font-style=uppercase
-			textcolor=Text
+			textcolor=MindiWhite
 		}
 		topfade
 		{
 			render_bg
 			{
-				0="gradient( x0, y0, x1, y1, backgroundOverlayTop, none )"
+			//	0="gradient( x0, y0, x1, y1, backgroundOverlayTop, none )"
 			}
 		}
 		bottomfade
 		{
 			render_bg
 			{
-				0="gradient( x0, y0, x1, y1, none, backgroundstartopaque )"
+			//	0="gradient( x0, y0, x1, y1, none, backgroundstartopaque )"
 			}
 		}	
 		overlaymain
 		{
-			bgcolor = "43 43 43 96"
+			bgcolor = "MindiOverlayBG"
 		}	
 				
 		topbar
 		{
 			font-size=36
-			textcolor=Label
+			textcolor=MindiWhite
 		}
 	}
 	

@@ -37,19 +37,19 @@
 		sidemenu
 		{
 			font-size=15
-			textcolor=texthover
+			textcolor=Mindi0
 		}
 		
 		sidemenu:hover
 		{
 			font-size=15
-			textcolor=text
+			textcolor=MindiWhite
 		}
 		
 		topbar
 		{
 			font-size=36
-			textcolor=text
+			textcolor=MindiWhite
 		}
 		
 		clocksuffix
@@ -64,7 +64,7 @@
 		timeStrings
 		{
 			font-size="17"
-			textcolor="label"
+			textcolor="MindiWhite"
 			font-family=basefont
 			font-weight=700
 		}

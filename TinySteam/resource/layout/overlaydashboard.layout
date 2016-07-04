@@ -62,32 +62,32 @@
 		{
 			font-size=14
 			font-style=uppercase
-			textcolor=text2
+			textcolor=MindiWhite
 		}
 		topfade
 		{
 			render_bg
 			{
-				0="gradient( x0, y0, x1, y1, backgroundOverlayTop, none )"
+			//	0="gradient( x0, y0, x1, y1, backgroundOverlayTop, none )"
 			}
 		}
 		bottomfade
 		{
 			render_bg
 			{
-				0="gradient( x0, y0, x1, y1, none, black )"
+			//	0="gradient( x0, y0, x1, y1, none, black )"
 			}
 		}	
 		overlaymain
 		{
-			bgcolor = "43 43 43 96"
+			bgcolor = "MindiOverlayBG"
 		}	
 				
 		topbar
 		{
 			font-size=36
 			
-			textcolor=text
+			textcolor=MindiWhite
 		}
 		detailsboxtitle
 		{
@@ -97,19 +97,19 @@
 		OverlayURLLabel
 				{
 			font-size=15
-			textcolor=text
+			textcolor=MindiWhite
 		}
 		
 		OverlayURLLabel:Hover
 				{
 			font-size=15
-			textcolor=white
+			textcolor=Mindi0
 		}
 		
 		LabelOverlay
 				{
 			font-size=14
-			textcolor=text2
+			textcolor=MindiWhite
 		}		
 	}
 	
