@@ -275,7 +275,12 @@
 			font-family=basefont
 			font-size=14
 			font-weight=400	
-			textcolor="text"	
+			textcolor="text"
+			render_bg
+			{
+				// background fill
+				0="fill( x0 + 1, y0 + 1, x1+1, y1, Mindi3  )"
+			}			
 		}
 		
 		LibrarySearch:empty
@@ -313,7 +318,12 @@
 			padding-left=0
 			padding-right=-1
 			padding-top=-1
-		
+
+			render_bg
+			{
+				// background fill
+				0="fill( x0 + 1, y0 + 1, x1+1, y1, Mindi3  )"
+			}			
 		}
 		
 		LibrarySearchIcon:disabled
@@ -410,6 +420,11 @@
 			font-weight=400
 			textcolor="Label"
 			font-style=uppercase
+			render_bg
+			{
+				// background fill
+				0="fill( x0 + 1, y0 + 1, x1+1, y1, Mindi3  )"
+			}
 		}	
 		
 		NavLabelView [!$OSX]
