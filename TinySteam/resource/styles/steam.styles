@@ -80,15 +80,24 @@ steam.styles
 	MindiGameList2="255 255 255 0" 		// Gamelist Group BG color 2
 	MindiBorder="1 1 1 255" 			// Black Border
 	MindiBar"255 152 31 255"			// Progressbar
+	
+	MindiBlack="0 0 0 255"				// Black
+	MindiWhite="255 255 255 255"		// White
+	MindiLink="255 152 31 255"			// Link color
+	MindiTest="192 0 255 255"			// Violet test color
+	
 	Mindi0="255 127 0 255"				// Dark Orange
 	Mindi="255 152 31 255"				// Orange
 	Mindi2="77 77 77 255"				// Dark Grey
 	Mindi2b="66 66 66 255"				// Dark Grey variation used for playtime
 	Mindi3="240 240 240 255"			// Light Grey Listboxes
-	MindiBlack="0 0 0 255"				// Black
-	MindiWhite="255 255 255 255"		// White
-	MindiLink="255 152 31 255"			// Link color
-	MindiTest="192 0 255 255"			// Violet test color
+	Mindi3b="240 240 240 255"			// Light Grey Chat BG
+	
+	MindiTab0="215 215 215 255"			// Tab normal state
+	MindiTab="Mindi"					// Tab active
+	MindiTab2="Mindi"					// Tab hover
+	MindiTab3="Mindi"					// Tab line
+	MindiTabText="MindiBlack"			// Tab text color
 	
 	MindiListGames0="137 137 137 255"
 	MindiListGames1="49 49 49 255"
@@ -529,7 +538,7 @@ steam.styles
       inset="0 2 0 0"
       render_bg
 			{
-				0="gradient_horizontal( x0-21, y0+1, x0+230, y1+1, buttonface2, Friends.ListHeaderFadeOut )"
+				0="gradient_horizontal( x0-21, y0+1, x0+230, y1+1, MindiGameList, MindiGameList2 )"
 			}
     }
             
@@ -1888,9 +1897,9 @@ steam.styles
 		bgcolor="DialogBG"
     }
       
-		PageTab
+	PageTab
     {
-		textcolor="Label"
+		textcolor="MindiTabText"
 		font-family=basefont
 		font-size=13
 		font-style=Uppercase
@@ -1898,16 +1907,16 @@ steam.styles
 		inset="0 -2 0 0"
     render_bg
 		{
-			// background gradient
-			0="fill( x0, y0 , x1, y1 - 4, PropertySheetBG )"
-			1="fill(x0, y1-2, x1+3000, y1 -1, divider )"		
+			// background
+			0="fill( x0, y0 , x1, y1 - 2, MindiTab0 )"
+			1="fill(x0, y1-2, x1+3000, y1 -1, MindiTab3 )"		
 		}
     }
 
     
     PageTab:selected
     {
-		textcolor="texthover"
+		textcolor="MindiTabText"
 		font-family=basefont
 		font-size=13
 		font-style=Uppercase
@@ -1917,48 +1926,48 @@ steam.styles
 	  render_bg
 			{
 				// background gradient
-				0="gradient( x0, y0 , x1, y1, buttonfacehover, dialogbg )"
-		    1="fill(x1, y1-2, x1+3000, y1 - 1, buttonfacehover )"
+				0="gradient( x0, y0 , x1, y1 + 1, MindiTab, MindiTab )"
+				1="fill(x1, y1-2, x1+3000, y1 - 1, MindiTab3 )"
 			}
     }
 
     
  	PageTab:hover
     {
-		textcolor="texthover"
+		textcolor="MindiTabText"
 		font-family=basefont
 		font-size=13
 		font-style=Uppercase
 		font-weight=400
 		inset="0 -2 0 0"
 		render_bg
-			{
-				// background gradient
-				0="fill( x0, y0 , x1, y1 - 4, divide )"
-				1="fill(x0, y1-2, x1+3000, y1 -1, divider )"
-			}
+		{
+			// background gradient
+			0="fill( x0, y0 , x1, y1 - 2, MindiTab2 )"
+			1="fill(x0, y1-2, x1+3000, y1 -1, MindiTab3 )"
+		}
     }
   
     PageTab:selected:hover
     {
-		textcolor="texthover"
+		textcolor="MindiTabText"
 		font-family=basefont
 		font-size=13
 		font-style=Uppercase
 		font-weight=400
 		inset="0 -2 0 0"
 		bgcolor="none"
-	  render_bg
-			{
-				// background gradient
-				0="gradient( x0, y0 , x1, y1, buttonfacehover, dialogbg )"
-		    1="fill(x1, y1-2, x1+3000, y1 - 1, buttonfacehover )"
-			}
+		render_bg
+		{
+			// background gradient
+			0="gradient( x0, y0 , x1, y1 + 1, MindiTab2, MindiTab2 )"
+			1="fill(x1, y1-2, x1+3000, y1 - 1, MindiTab3 )"
+		}
     }
       
   PageTab:Focus
 	  {
-		textcolor="Texthover"
+		textcolor="MindiTabText"
     }
 
 	"PageDragFrame PageTab"
@@ -2068,15 +2077,15 @@ steam.styles
         
     RichText
     {
-		textcolor="Text"
-		selectedtextcolor="TextSelected"		
+		textcolor="Mindi2"
+		selectedtextcolor="Mindi0"		
 		font-family=basefont
 		font-size=14
 		font-weight=400
 		inset="-1 -1 0 0"
 		render_bg
 		{
-		-1="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG )"
+		-1="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, Mindi3 )"
         
 		// lines around
 		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
@@ -3461,7 +3470,7 @@ steam.styles
 
 		render_bg
 			{
-						 0="gradient( x0, y0, x1, y1, almostblack , almostblack )"
+						 0="gradient( x0, y0, x1, y1, Mindi3b , Mindi3b )"
 			}
 		}
 			
