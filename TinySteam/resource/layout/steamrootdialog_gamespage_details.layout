@@ -121,7 +121,7 @@
 			font-style="uppercase"
 			render_bg
 			{
-				0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, MindiGameList, MindiGameList  )"
+				0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, MindiGameList, MindiGameList2  )"
 			}    
 		} 
 

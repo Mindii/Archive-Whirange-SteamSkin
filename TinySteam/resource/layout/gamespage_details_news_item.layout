@@ -35,8 +35,8 @@
 
 		newsitem_body
 		{
-			textcolor="Label"
-			selectedtextcolor="Label"	
+			textcolor="Mindi2"
+			selectedtextcolor="Mindi0"	
 			render_bg {}
 			font-size=15
 			font-family=basefont
@@ -46,15 +46,15 @@
 		{
 			font-size=15
 			font-style="underline"
-			selectedtextcolor="Label"	
+			selectedtextcolor="Mindi0"	
 		}
 		
 		"newsitem_body url:hover"
 		{
 			font-size=15
 			font-style="underline"
-			textcolor="text"
-			selectedtextcolor="label"	
+			textcolor="Mindi"
+			selectedtextcolor="Mindi0"	
 		}
 		
 		"newsitem_body bold"
@@ -70,14 +70,14 @@
 			font-style="underline"
 			font-weight=400
 			font-family=basefont
-			textcolor="label"
-			selectedtextcolor="Label"	
+			textcolor="Mindi"
+			selectedtextcolor="Mindi0"	
 		}
 		
 		more_link:hover
 		{
 			font-style="underline"
-			textcolor="text"
+			textcolor="Mindi0"
 		}
 	}
 
