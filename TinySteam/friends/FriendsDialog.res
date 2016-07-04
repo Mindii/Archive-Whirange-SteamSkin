@@ -273,11 +273,7 @@
 			render_bg
 			{
 				// background fill
-				0="fill( x0 + 1, y0 + 1, x1+1, y1, DarkClientBG  )"
-	     
-
-				// single pixel fills in the corners
-				
+				0="fill( x0 + 1, y0 + 1, x1+1, y1, Mindi3  )"
 			}
 		}
 		
@@ -318,7 +314,7 @@
 			render_bg
 			{
 				// background fill
-				0="fill( x0 + 2, y0 - 1, x1 + 2, y1 +3, DarkClientBG  )"
+				0="fill( x0 + 2, y0 - 1, x1 + 2, y1 +3, Mindi3  )"
 			}
 		}
 		
@@ -332,7 +328,7 @@
 			render_bg
 			{
 				// background fill
-				0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, dialogbg )"
+				0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, MindiWhite )"
 			}
 		}		
 		
