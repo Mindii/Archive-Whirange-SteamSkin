@@ -42,7 +42,7 @@
 	     		render_bg
 	     		{
 					// background fill
-					0="gradient( x0 + 1, y0 + 2, x1 - 4, y1 - 1, launch1, launch1 )"
+					0="gradient( x0 + 1, y0 + 2, x1 - 4, y1 - 1, launch3, launch3 )"
 			                
 					// lines around
 					1="fill( x0 + 2, y0 + 1, x1 - 5, y0 + 2, buttonface2 )"  // top
@@ -75,7 +75,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 2, x1 - 4, y1 - 1, launch2, launch2 )"
+				0="gradient( x0 + 1, y0 + 2, x1 - 4, y1 - 1, launch4, launch4 )"
 
 				// lines around
 				1="fill( x0 + 2, y0 + 1, x1 - 5, y0 + 2, buttonborderactive )"  // top

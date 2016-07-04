@@ -150,7 +150,7 @@
 			
 		AccountBalanceStyle
 		{
-		      textcolor="labeldisabled"
+		      textcolor="Mindi"
 		      bgcolor="none"
 		      font-family=basefont
 		      font-size=14
@@ -160,7 +160,7 @@
 
 		AccountBalanceStyle [$OSX]
 		{
-		      textcolor="labeldisabled"
+		      textcolor="Mindi"
 		      bgcolor="none"
 		      font-family=basefont
 		      font-size=13
@@ -171,12 +171,12 @@
     
     AccountBalanceStyle:Hover
 		{
-		      textcolor="texthover"
+		      textcolor="Mindi0"
 		}  
 		
 		AccountBalanceSeparatorStyle
 		{
-					textcolor="ScrollGlyphDisabled"
+					textcolor="Mindi2"
 					font-family=basefont
 					font-size=13
 					font-weight=400
@@ -802,24 +802,24 @@
 		}
 		AccountURLStyle
 		{
-		  textcolor=labeldisabled
+		  textcolor=Mindi
 		  padding-top=-4
 		  padding-right=-14
 		}
 		
 		AccountURLStyle:hover
 		{
-			textcolor=texthover
+			textcolor=Mindi0
 		}
 		
 		AccountURLStyle:selected
 		{
-			textcolor=white
+			textcolor=Mindi0
 		}
 
 		AccountURLStyle:disabled
 		{
-			textcolor="TextDisabled"
+			textcolor="Mindi3"
 		}
 		
 		

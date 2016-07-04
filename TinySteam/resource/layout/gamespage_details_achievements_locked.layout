@@ -48,7 +48,7 @@
 		     	render_bg
 		     	{
 			        // background fill
-			        0="gradient( x0, y0 - 2, x1 - 1, y1 + 1, buttonface2, propertysheetbg )"        
+			        0="gradient( x0, y0 - 2, x1 - 1, y1 + 1, launch3, launch3 )"        
     			}
     		}   
     		   
@@ -61,7 +61,7 @@
 		    	 render_bg
 		    	 {
 		      	  	// background fill
-		       		0="gradient( x0, y0 - 2, x1 - 1, y1 + 1, buttonfaceactive, propertysheetbg )"
+		       		0="gradient( x0, y0 - 2, x1 - 1, y1 + 1, launch4, launch4 )"
     			}
     		}     
 
