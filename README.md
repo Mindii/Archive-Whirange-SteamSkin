@@ -1,4 +1,4 @@
-# TinySteam-Skin
+# TinySteam
 WIP White/Orange Clean skin for steam
 
 # Usage
