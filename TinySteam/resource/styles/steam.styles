@@ -74,6 +74,7 @@ steam.styles
     LabelFocus="59 59 59 255"
 	
 	// Main custom color block
+	//########################
 	MindiGameListName="0 0 0 255" 		// Gamelist Group Name
 	MindiGameList="255 255 255 255" 	// Gamelist Group BG color 1
 	MindiGameList2="255 255 255 0" 		// Gamelist Group BG color 2
@@ -82,18 +83,42 @@ steam.styles
 	Mindi0="255 127 0 255"				// Dark Orange
 	Mindi="255 152 31 255"				// Orange
 	Mindi2="77 77 77 255"				// Dark Grey
+	Mindi2b="66 66 66 255"				// Dark Grey variation used for playtime
 	Mindi3="240 240 240 255"			// Light Grey Listboxes
-	MindiLink="255 152 31 255"	
+	MindiBlack="0 0 0 255"				// Black
+	MindiWhite="255 255 255 255"		// White
+	MindiLink="255 152 31 255"			// Link color
+	MindiTest="192 0 255 255"			// Violet test color
+	
 	MindiListGames0="137 137 137 255"
 	MindiListGames1="49 49 49 255"
 	MindiListGames1b="0 0 0 255"
 	MindiListGames2="255 114 0 255"
 	MindiListGames2b="255 90 0 255"
-	launch0 "175 175 175 255"   		// not modified
-	launch1 "221 221 221 255"   		// Button normal state
-	launch2 "153 153 153 255"  			// Button on use
-	launch3 "255 152 31 255"   			// Button normal state install/buy
+	
+	MindiMenu="255 255 255 255"		// Menu text color
+	MindiMenu2="255 255 255 255"	// Menu text color
+	MindiMenuText="Mindi2"			// Menu text color
+	MindiMenuTextH="Mindi"			// Menu text hover color
+	MindiMenuTextS="Mindi0"			// Menu text selected color
+	
+	launch0 "175 175 175 255"   		// Not sure what this do anymore need to check
+	launch1 "255 152 31 255"   			// Button normal state
+	launch2 "255 138 0 255"  			// Button on use
+	launch3 "221 221 221 255"   		// Button normal state install/buy
 	launch4 "255 138 0 255"   			// Button on use install/buy
+	
+	BackgroundName="255 255 255 160" 	// Game name/play button area bg
+    BackgroundStart="255 255 255 230"	// Achievements, Community, News
+	// Block end
+	
+	
+	// check if these do anything anymore
+	BackgroundStartSubtle="255 255 255 255" 
+    BackgroundStartSubtle="255 255 255 255" [$OSX] // this is for osx what i can read if someone read this and know the osx tell me what it really do
+    BackgroundStartSubtlest="255 255 255 255"
+	BackgroundStartOpaque="255 255 255 255"
+	
 	
     SuperNav="white"
     SuperNavHover="white"
@@ -128,18 +153,11 @@ steam.styles
 
     WhiteWolf="255 255 255 255"
     WhiteWolf2="255 255 255 255"
-
-	BackgroundName="255 255 255 255" // Game name/play bg
-    BackgroundStartSubtle="255 255 255 255" 
-    BackgroundStartSubtle="255 255 255 255" [$OSX]
-    BackgroundStartSubtlest="255 255 255 255"
-    BackgroundStart="255 255 255 255"
-    BackgroundStartOpaque="255 255 255 255"
     
     ClientBG="255 255 255 255"
     ClientBGTop="255 255 255 255"
     ClientGrouper="255 255 255 255"
-    DialogBG="255 255 255 255"
+    DialogBG="255 255 255 255"		// Main Color
     DialogBGFade1="255 255 255 255"
     DialogBGFade2="255 255 255  0"  
     
@@ -1685,30 +1703,38 @@ steam.styles
     
 	MainNav
     {
-		textcolor="Text2"
-		selectedtextcolor="Text"
+		textcolor="MindiBlack"
+		selectedtextcolor="MindiBlack"
 		bgcolor="none"
 		font-family=basefont
 		font-size=21
 		font-weight=700
 		font-style="uppercase"
+		render_bg
+		{
+			0="gradient( x0, y0, x1, y0 + 140, MindiMenu, MindiMenu )"
+			1="fill( x0, y0 + 140, x1, y1, MindiMenu )"
+			2="gradient_horizontal( x0, y1-1, x1, y1, MindiBorder, MindiBorder )"    // bottom
+			3="gradient( x1-1, y0, x1, y1 , MindiBorder, MindiBorder )" // right
+			4="fill( x0, y0, x1, y0+1, MindiBorder )"  // top
+			5="fill( x0, y0, x0+1, y1, MindiBorder )" // left
+		}
     }
 
 	Menu
     {
-		bgcolor="MenuBG2"
+		bgcolor="MindiMenu2"
 		padding-right=4
 		inset="2 2 2 2"
       
 		render_bg
 		{
-			0="gradient( x0, y0, x1, y0 + 140, MenuBG1, MenuBG2 )"
-			1="fill( x0, y0 + 140, x1, y1, MenuBG2 )"
-			2="gradient_horizontal( x0, y1-1, x1, y1, BlueBorder, BlueBorder )"    // bottom
-			3="gradient( x1-1, y0, x1, y1 , BlueBorder, BlueBorder )" // right
-			4="fill( x0, y0, x1, y0+1, BlueBorder )"  // top
-			5="fill( x0, y0, x0+1, y1, BlueBorder )" // left
-
+			0="gradient( x0, y0, x1, y0 + 140, MindiMenu, MindiMenu )"
+			1="fill( x0, y0 + 140, x1, y1, MindiMenu )"
+			2="gradient_horizontal( x0, y1-1, x1, y1, MindiBorder, MindiBorder )"    // bottom
+			3="gradient( x1-1, y0, x1, y1 , MindiBorder, MindiBorder )" // right
+			4="fill( x0, y0, x1, y0+1, MindiBorder )"  // top
+			5="fill( x0, y0, x0+1, y1, MindiBorder )" // left
 		}
       
 		render {}
@@ -1717,7 +1743,7 @@ steam.styles
       
     MenuBar
     {
-		bgcolor=dialogbg
+		bgcolor=MindiWhite
 		padding-right=1
 		padding-left=6
 		padding-top=2
@@ -1731,19 +1757,19 @@ steam.styles
     
 	"MenuBar MenuButton" 
 	{
-		textcolor="buttonborder"
+		textcolor="MindiMenuText"
 		padding-right=-2
 		inset="-2 0 2 0"
 	}
 	
  	"MenuBar MenuButton:frameFocus" 
 	{
-		textcolor="labeldisabled"
+		textcolor="MindiMenuText"
 	}
 	
 	"MenuBar MenuButton:frameFocus:hover" 
 	{
-		textcolor="texthover"
+		textcolor="MindiMenuTextH"
 		bgcolor=none
 		render_bg
    		{    
@@ -1752,7 +1778,7 @@ steam.styles
 	
 	"MenuBar MenuButton:frameFocus:selected" 
 	{
-		textcolor="texthover"
+		textcolor="MindiMenuTextS"
 		bgcolor=none
 		render_bg
    		{    
@@ -1764,25 +1790,25 @@ steam.styles
       font-family=basefont
       font-size=14
       font-weight=400
-      textcolor="scrollglyph"
+      textcolor="MindiMenuTextH"
       bgcolor="none"
       render_bg {}
     }  
    
   MenuButton:hover
     {
-      textcolor="white"
+      textcolor="MindiMenuTextH"
     }
     
   MenuButton:selected
     {
-		textcolor="white"
+		textcolor="MindiMenuTextS"
     }
         
 	MenuItem
     {
 		font-family=basefont
-		textcolor="label"
+		textcolor="MindiMenuText"
 		font-size=14
 		font-weight=400
 		inset="0 0 0 0"
@@ -1793,32 +1819,32 @@ steam.styles
    
   MenuItem:selected
     {
-		textcolor="TextHover"
+		textcolor="MindiMenuTextS"
 		bgcolor="none"
     }
 	
   MenuItem:hover
     {
-		textcolor="white"
+		textcolor="MindiMenuTextH"
 		bgcolor="none"
     }
     
     MenuItem:disabled
     {
-		textcolor="labeldisabled"
+		textcolor="Mindi3"
 		shadowtextcolor=none
     }
     
     MenuItem:disabled:hover
     {
-		textcolor="labeldisabled"
+		textcolor="Mindi2"
 		shadowtextcolor=none
     }
    
     MenuSeparator
     {
 		inset="-4 0 0 0"	
-		textcolor="divider"
+		textcolor="Mindi3"
 		bgcolor=none
     }
 
