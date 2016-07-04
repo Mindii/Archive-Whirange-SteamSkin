@@ -70,17 +70,17 @@ steam.styles
     NavLabel="102 102 102 255"
     Label="255 152 31 255"
 	
-	MindiGameListName="0 0 0 255" 	// Gamelist Group Name
-	MindiGameList="236 236 236 255" // Gamelist Group BG
-	MindiBorder="1 1 1 255" 		// Border
-	Mindi="255 152 31 255"
-	Mindi2="77 77 77 255"
+	MindiGameListName="0 0 0 255" 		// Gamelist Group Name
+	MindiGameList="255 255 255 255" 	// Gamelist Group BG color 1
+	MindiGameList2="255 255 255 0" 		// Gamelist Group BG color 2
+	MindiBorder="1 1 1 255" 			// Black Border
+	Mindi0="255 127 0 255"
+	Mindi="255 152 31 255"				// Orange
+	Mindi2="77 77 77 255"				// Dark Grey
     Label2="144 144 144 255"
     LabelDisabled="140 140 140 255"
     LabelFocus="59 59 59 255"
-	
 	MindiLink="255 152 31 255"
-	
 	MindiListGames0="137 137 137 255"
 	MindiListGames1="49 49 49 255"
 	MindiListGames1b="0 0 0 255"
