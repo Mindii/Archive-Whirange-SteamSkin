@@ -111,6 +111,8 @@ steam.styles
 	MindiMenuTextH="Mindi"			// Menu text hover color
 	MindiMenuTextS="Mindi0"			// Menu text selected color
 	
+	MindiOverlayBG="0 0 0 190"		// Black
+	
 	launch0 "175 175 175 255"   		// Not sure what this do anymore need to check
 	launch1 "255 152 31 255"   			// Button normal state
 	launch2 "255 138 0 255"  			// Button on use
