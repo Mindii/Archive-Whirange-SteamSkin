@@ -143,7 +143,7 @@
 		nameInstanceStyle
 		{
 			font-family=basefont
-			textcolor="label"
+			textcolor="Mindi2"
 			font-size=14
 		}
 		
