@@ -77,8 +77,11 @@ steam.styles
 	//########################
 	MindiGameListName="0 0 0 255" 		// Gamelist Group Name
 	MindiGameList="255 255 255 255" 	// Gamelist Group BG color 1
-	MindiGameList2="255 255 255 0" 		// Gamelist Group BG color 2
+	MindiGameList2="255 255 255 255" 	// Gamelist Group BG color 2
+	
 	MindiBorder="1 1 1 255" 			// Black Border
+	MindiBorderL="199 199 199 255"		// Light grey Border (used on main window)
+	MindiBorderD="164 164 164 255"		// Light grey Border (game details Achievements, Screenshots, News etc.)
 	MindiBar"255 152 31 255"			// Progressbar
 	
 	MindiBlack="0 0 0 255"				// Black
@@ -92,6 +95,7 @@ steam.styles
 	Mindi2b="66 66 66 255"				// Dark Grey variation used for playtime
 	Mindi3="240 240 240 255"			// Light Grey Listboxes
 	Mindi3b="240 240 240 255"			// Light Grey Chat BG
+	Mindi3c="184 184 184 255"			// Light Grey Chat disaple button text
 	
 	MindiTab0="215 215 215 255"			// Tab normal state
 	MindiTab="Mindi"					// Tab active
@@ -119,8 +123,8 @@ steam.styles
 	launch3 "221 221 221 255"   		// Button normal state install/buy
 	launch4 "255 138 0 255"   			// Button on use install/buy
 	
-	BackgroundName="255 255 255 160" 	// Game name/play button area bg
-    BackgroundStart="255 255 255 230"	// Achievements, Community, News
+	BackgroundName="255 255 255 110" 	// Game name/play button area bg
+    BackgroundStart="255 255 255 140"	// Achievements, Community, News
 	// Block end
 	
 	
@@ -503,7 +507,7 @@ steam.styles
     
     Button:disabled
     {
-      textcolor="LabelDisabled"
+      textcolor="Mindi3c"
       render_bg
       {     
         // background fill
@@ -1928,7 +1932,7 @@ steam.styles
 	  render_bg
 			{
 				// background gradient
-				0="gradient( x0, y0 , x1, y1 + 1, MindiTab, MindiTab )"
+				0="gradient( x0, y0 , x1, y1 - 1, MindiTab, MindiTab )"
 				1="fill(x1, y1-2, x1+3000, y1 - 1, MindiTab3 )"
 			}
     }
@@ -1962,7 +1966,7 @@ steam.styles
 		render_bg
 		{
 			// background gradient
-			0="gradient( x0, y0 , x1, y1 + 1, MindiTab2, MindiTab2 )"
+			0="gradient( x0, y0 , x1, y1 - 1, MindiTab2, MindiTab2 )"
 			1="fill(x1, y1-2, x1+3000, y1 - 1, MindiTab3 )"
 		}
     }
