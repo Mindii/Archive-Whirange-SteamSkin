@@ -103,6 +103,10 @@ steam.styles
 	MindiTab3="Mindi"					// Tab line
 	MindiTabText="MindiBlack"			// Tab text color
 	
+	MindiChat="77 77 77 255"			// Own text color on chat
+	MindiChatF="33 33 33 255"			// friend text color on chat
+	MindiChatH="Mindi3c"				// history text color on chat
+	
 	MindiListGames0="137 137 137 255"
 	MindiListGames1="49 49 49 255"
 	MindiListGames1b="0 0 0 255"
@@ -123,8 +127,10 @@ steam.styles
 	launch3 "221 221 221 255"   		// Button normal state install/buy
 	launch4 "255 138 0 255"   			// Button on use install/buy
 	
-	BackgroundName="255 255 255 110" 	// Game name/play button area bg
-    BackgroundStart="255 255 255 140"	// Achievements, Community, News
+	BackgroundName="255 255 255 160" 	// Game name/play button area bg
+    BackgroundStart="255 255 255 220"	// Achievements, Community, News
+	
+	PropertySheet.FlashTabColor	"255 255 255 255"   //not modified
 	// Block end
 	
 	
@@ -304,7 +310,6 @@ steam.styles
     
     PropertySheet.TransitionEffectTime    "0"     // time to change from one tab to another
     PropertySheet.TabGap        1
-    PropertySheet.FlashTabColor	"76 159 191 255"   //not modified
 
     RichText.InsetX         8
     RichText.InsetY         7
@@ -556,7 +561,7 @@ steam.styles
       font-size=14
       font-size=13 [$OSX]
       font-weight=400
-      textcolor="label"
+      textcolor="Mindi2"
     }
 
     CheckButton
@@ -564,7 +569,7 @@ steam.styles
       font-family=basefont
       font-size=14
       font-weight=400
-      textcolor="Label"
+      textcolor="Mindi2"
       image="graphics/chkUnselStd"
     }
   
@@ -575,14 +580,14 @@ steam.styles
 
     CheckButton:focus
     {
-      textcolor="Text"
+      textcolor="Mindi"
       bgcolor=none
       image="graphics/chkUnselFocus"  
     }
 
     CheckButton:selected:focus
     {
-      textcolor="Texthover"
+      textcolor="Mindi"
       render_bg {}
       bgcolor=none
       image="graphics/chkSelFocus"
@@ -608,7 +613,7 @@ steam.styles
 		font-family=basefont
 		font-size=14
 		font-weight=400
-		textcolor="Label"
+		textcolor="Mindi2"
 		bgcolor=none
 		image="graphics/chkIndeterminate"
 	}
@@ -616,7 +621,7 @@ steam.styles
     CheckButtonList
     {
         inset="1 1 1 1"
-        textcolor="text2"
+        textcolor="Mindi2"
         bgcolor=none
         render	{     	}  
 			render_bg {				
@@ -640,7 +645,7 @@ steam.styles
     "Page CheckButtonList"
     {
         inset="1 1 1 1"
-        textcolor="text2"
+        textcolor="Mindi2"
         bgcolor=none
         render	{  		}  
 				render_bg
@@ -672,48 +677,48 @@ steam.styles
     ComboBox
     {
       inset="3 0 0 0"
-      textcolor="Text"
+      textcolor="Mindi2"
       font-family=basefont
       font-size="14"
-      selectedtextcolor="TextEntrySelected"
+      selectedtextcolor="Mindi3"
       selectedbgcolor="TextSelectedBG"
       render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, Mindi, Mindi )"
       }
     }
     
     ComboBox:hover
     {
     selectedbgcolor="none"
-    selectedtextcolor="Text"
+    selectedtextcolor="Mindi3"
     render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, Mindi0, Mindi0 )"
       }
     }
     
     ComboBox:focus
     {
     selectedbgcolor="none"
-    selectedtextcolor="Text"
+    selectedtextcolor="Mindi3"
     render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, Mindi0, Mindi0 )"
       }
     }
     
     ComboBox:focus:hover
     {
     selectedbgcolor="none"
-    selectedtextcolor="Text"
+    selectedtextcolor="MindiWhite"
     render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, Mindi0, Mindi0 )"
       }
     }
     
@@ -722,7 +727,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, Mindi, Mindi )"
       }
     }
     
@@ -731,7 +736,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, Mindi0, Mindi0 )"
       }
     }
     
@@ -740,7 +745,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient(x0, y0, x1, y1, buttonfacehover, propertysheetbg )"
+        0="gradient(x0, y0, x1, y1, Mindi0, Mindi0 )"
       }
     }
     
@@ -749,7 +754,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, Mindi0, Mindi0 )"
       }
     }
     
@@ -1144,9 +1149,12 @@ steam.styles
 		render_bg 
 		{
 			// background gradient        
-			0="gradient( x0, y0, x1, y1, Mindi3, Mindi3 )"
-			//1="gradient( x0, y0, x1, y0 + 31, backgroundstartsubtle, none )"
-
+			0="gradient( x0, y0, x1, y1, MindiWhite, MindiWhite )"
+			
+			2="gradient_horizontal( x0, y1-1, x1, y1, MindiBorderD, MindiBorderD )"    // bottom
+			3="gradient( x1-1, y0, x1, y1 , MindiBorderD, MindiBorderD )" // right
+			4="fill( x0, y0, x1, y0+1, MindiBorderD )"  // top
+			5="fill( x0, y0, x0+1, y1, MindiBorderD )" // left
 		}
 	}
       
@@ -1405,8 +1413,9 @@ steam.styles
 		render_bg    
 			{
 				// fill
-				0="fill (x0, y0 + 1, x1, y1 + 1, propertysheetbg )" // bg fill
-				1="fill (x0 + 1, y0 + 1, x1, y0 + 3, propertysheetbg)" // bg fill2
+				//0="gradient( x0, y0, x1, y1, MindiWhite, MindiWhite )"
+				//0="fill (x0, y0 + 1, x1, y1 + 1, propertysheetbg )" // bg fill
+				//1="fill (x0 + 1, y0 + 1, x1, y0 + 3, propertysheetbg)" // bg fill2
 			}   
 		}
     
@@ -1430,7 +1439,8 @@ steam.styles
 		render_bg    
 		{
 			// fill
-			0="fill (x0, y0 + 1, x1, y1, propertysheetbg )" // bg fill
+			// 0="gradient(x0, y0 + 1, x1, y1, MindiWhite, MindiWhite )"
+			// 0="fill (x0, y0 + 1, x1, y1, propertysheetbg )" // bg fill
 		}   
 	}
 
@@ -1537,8 +1547,8 @@ steam.styles
 		render 
 		{
 			//fill makes dragger visible
-			0="fill( x0, y0 + 2, x0 + 1, y1 - 3, dialogbg )" // left
-			1="fill (x0, y0, x0+1, y0+3, propertysheetbg )" //dot
+			0="fill( x0, y0 + 2, x0 + 1, y1 - 3, MindiBorderD )" // left
+			1="fill (x0, y0, x0+1, y0+3, MindiBorderD )" //dot
 		}
     }
     
@@ -1548,14 +1558,10 @@ steam.styles
 		font-size=15
 		textcolor="text2"
 		bgcolor="none" 
-    render
-			{				
-
-			}
-		render_bg 
-			{				
-
-			}
+		render
+		{				
+		
+		}
     } 
     
     ListPanelInterior:scrollbar
@@ -1581,11 +1587,13 @@ steam.styles
     
      "Csteamrootdialog ListPanelInterior"
     {     
-      inset="3 0 3 0"
-			bgcolor=none
+		inset="3 0 3 0"
+		bgcolor=none
 
-			render_bg {}
+		render_bg 
+		{		
 		}
+	}
 	
 	"Csteamrootdialog ListPanelInterior:scrollbar"
     {     
@@ -1604,14 +1612,11 @@ steam.styles
 		inset="3 1 -1 0"
 		font-size=15
 		bgcolor=none
-		render
-		{		
-
-		}
 		render_bg 
 		{				
 			// background gradient        
-			0="gradient( x0, y0, x1, y1, Mindi3, Mindi3 )"
+			//0="gradient( x0, y0, x1, y1, Mindi3, Mindi3 )"
+			//1="fill( x0, y0 + 140, x1, y1, MindiTest )"
 		}
 	}
 	
@@ -1654,7 +1659,7 @@ steam.styles
 	"ListPanel RichText url" 
 	{
 		font-size=15
-		textcolor="Text"
+		textcolor="Mindi2"
 		font-style=underline
 	}
 
@@ -2111,19 +2116,19 @@ steam.styles
 	"RichText url"
 	{
 		font-size=14
-		textcolor="label"
-		selectedtextcolor="label"
+		textcolor="Mindi2"
+		selectedtextcolor="Mindi2"
 		font-style=underline
 	}
 	
 	"RichText url:hover"
 	{
-		textcolor="Texthover"
+		textcolor="Mindi0"
 	}
 	
 	"CFriendPanel RichText URL" 
 		{
-		textcolor="text"
+		textcolor="Mindi2"
 		font-style=underline
 		font-size=14
 		}
@@ -2704,36 +2709,36 @@ steam.styles
       font-family=basefont
       font-size=13
       font-weight=400
-      textcolor="Text"
+      textcolor="Mindi2"
       bgcolor=none
       render_bg
       {
       
         // background fill
-	   0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
+	   0="gradient( x0, y0, x1, y1, Mindi, Mindi )"
       }
     }
   
     ToggleButton:focus
     {     
-            textcolor="TextHover"
+            textcolor="Mindi2"
             bgcolor="none"
 	 		render_bg
 		{
 			// background fill
-			0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
+			0="gradient( x0, y0, x1, y1, Mindi0, Mindi0 )"
 		}
     }
     
     ToggleButton:hover
     {
-      textcolor="TextHover"
+      textcolor="Mindi2"
       bgcolor="none"
       render_bg
       {     
         
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, Mindi0, Mindi0 )"
       }
     }
     
@@ -2745,7 +2750,7 @@ steam.styles
       render_bg
       {
         	// background fill
-		0="gradient( x0, y0, x1, y1, backgroundstartopaque, propertysheetbg )"
+		0="gradient( x0, y0, x1, y1, Mindi0, Mindi0 )"
       }
     }
   
@@ -2760,7 +2765,7 @@ steam.styles
       render_bg
       {
       // background fill
-			0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
+			0="gradient( x0, y0, x1, y1, Mindi, Mindi )"
       }
     }
     
@@ -2770,7 +2775,7 @@ steam.styles
       bgcolor="none"
       render_bg
       {
-      	0="gradient( x0, y0, x1, y1, buttonfacehover, propertysheetbg )"
+      	0="gradient( x0, y0, x1, y1, Mindi0, Mindi0 )"
       }
     }
   
@@ -2780,7 +2785,7 @@ steam.styles
       bgcolor="none"
       render_bg
       {
-				0="gradient( x0, y0, x1, y1, buttonfacefocus, propertysheetbg )"
+				0="gradient( x0, y0, x1, y1, Mindi0, Mindi0 )"
       }
     }
    
@@ -2790,7 +2795,7 @@ steam.styles
       bgcolor="none"
       render_bg
       {
-				0="gradient( x0, y0, x1, y1, backgroundstartopaque, propertysheetbg )"
+				0="gradient( x0, y0, x1, y1, Mindi0, Mindi0 )"
       }
     }
     
@@ -2801,10 +2806,10 @@ steam.styles
 
 	render_bg
         {
-			1="gradient_horizontal( x0, y1-1, x1, y1, blueborder, blueborder )"    // bottom
-			2="gradient( x1-1, y0, x1, y1 , blueborder, blueborder )" // right
-			3="fill( x0, y0, x1, y0+1, blueborder )"  // top
-			4="fill( x0, y0, x0+1, y1, blueborder )" // left
+			1="gradient_horizontal( x0, y1-1, x1, y1, MindiBorderL, MindiBorderL )"    // bottom
+			2="gradient( x1-1, y0, x1, y1 , MindiBorderL, MindiBorderL )" // right
+			3="fill( x0, y0, x1, y0+1, MindiBorderL )"  // top
+			4="fill( x0, y0, x0+1, y1, MindiBorderL )" // left
 	}
     }
 
@@ -3333,12 +3338,12 @@ steam.styles
 	
 	console_text_error
 	{
-		textcolor="Highlight3"
+		textcolor="MindiError"
 		font-size=14
 		font-family="Menlo" [$OSX]
       	font-size=16 [$OSX]
-		selectedtextcolor="TextSelected"
-		selectedbgcolor="Focus"
+		selectedtextcolor="Mindi0"
+		selectedbgcolor="Mindi3b"
 	}
 	
 	console_text
@@ -3347,47 +3352,47 @@ steam.styles
 		font-size=9
 		font-family="Menlo" [$OSX]
       	font-size=14 [$OSX]
-	    textcolor="text"
-		selectedtextcolor="TextSelected"	
-		selectedbgcolor="Focus"
+	    textcolor="Mindi2"
+		selectedtextcolor="Mindi0"	
+		selectedbgcolor="Mindi3b"
 	}
 	
 	friends_chat_text
 	{
-		textcolor="text"
-		selectedtextcolor="TextentrySelected"	
-		SelectedBgColor="focus"
+		textcolor="MindiChatF"
+		selectedtextcolor="Mindi0"	
+		SelectedBgColor="Mindi3b"
 		font-size=16
 	}
 	
 	friends_chat_text_self
 	{
-		textcolor="ChatOwnTextColor"
-		selectedtextcolor="TextentrySelected"	
-		selectedbgcolor="focus"
+		textcolor="MindiChat"
+		selectedtextcolor="Mindi0"	
+		selectedbgcolor="Mindi3b"
 		font-size=16
 	}
 
 	friends_chat_history
 	{
-		textcolor="ChatDialog.HistoryColor"
-		selectedtextcolor="TextentrySelected"	
-		selectedbgcolor="focus"
+		textcolor="MindiChatH"
+		selectedtextcolor="Mindi0"	
+		selectedbgcolor="Mindi3b"
 		font-size=16
 	}
 	
 	friends_chat_event
 	{
-		textcolor="Text"
+		textcolor="MindiBlack"
 		font-size=16
-		selectedtextcolor="TextentrySelected"
-		selectedbgcolor="focus"
+		selectedtextcolor="Mindi0"
+		selectedbgcolor="Mindi3b"
 	}
 
 	friends_chat_bright_event
 	{
 		textcolor="text"
-		selectedtextcolor="TextentrySelected"
+		selectedtextcolor="Mindi0"
 		font-size=16
 		font-weight=1000
 	}
@@ -3395,26 +3400,25 @@ steam.styles
 	friends_chat_url
 	{
 		textcolor="text"
-   		SelectedBgColor="focus"
 		font-style=underline
 		font-size=16
-		selectedtextcolor="TextentrySelected"
-		selectedbgcolor="focus"
+		selectedtextcolor="Mindi0"
+		selectedbgcolor="Mindi3b"
 	}
 	
 	friends_chat_name_ingame
 	{
 		textcolor="Friends.InGameColor"
-		selectedtextcolor="TextentrySelected"	
-		selectedbgcolor="focus"
+		selectedtextcolor="Mindi0"	
+		selectedbgcolor="Mindi3b"
 		font-size=16
 	}
 
 	friends_chat_name_golden
 	{
 		textcolor="Friends.GoldenColor"
-		selectedtextcolor="TextentrySelected"	
-		selectedbgcolor="focus"
+		selectedtextcolor="Mindi0"	
+		selectedbgcolor="Mindi3b"
 		font-size=16
 	}
 
@@ -3422,8 +3426,8 @@ steam.styles
 	friends_chat_self
 	{
 		textcolor="Friends.OnlineColor"
-		selectedtextcolor="TextentrySelected"	
-		selectedbgcolor="focus"
+		selectedtextcolor="Mindi0"	
+		selectedbgcolor="Mindi3b"
 		font-size=16
 	}
 	
@@ -3431,14 +3435,14 @@ steam.styles
 	{
 		textcolor="Friends.OnlineColor"
 		selectedtextcolor="TextentrySelected"	
-		selectedbgcolor="focus"
+		selectedbgcolor="Mindi3b"
 		font-size=16
 	}
 	
 	friends_chat_accountid
 	{
 		selectedtextcolor="TextentrySelected"	
-		selectedbgcolor="focus"
+		selectedbgcolor="Mindi3b"
 		textcolor="text"
 		font-size=16
 	}
@@ -3452,7 +3456,7 @@ steam.styles
 		font-weight=400
 		font-style=underline
 		selectedtextcolor="TextSelected"	
-		selectedbgcolor="Focus"
+		selectedbgcolor="Mindi3"
 	}
 	
 		CChatRoomDlg
@@ -3476,7 +3480,11 @@ steam.styles
 
 		render_bg
 			{
-						 0="gradient( x0, y0, x1, y1, Mindi3b , Mindi3b )"
+			0="gradient( x0, y0, x1, y1, Mindi3b , Mindi3b )"
+			2="gradient_horizontal( x0, y1-1, x1, y1, MindiBorderL, MindiBorderL )"    // bottom
+			3="gradient( x1-1, y0, x1, y1 , MindiBorderL, MindiBorderL )" // right
+			4="fill( x0, y0, x1, y0+1, MindiBorderL )"  // top
+			5="fill( x0, y0, x0+1, y1, MindiBorderL )" // left
 			}
 		}
 			
