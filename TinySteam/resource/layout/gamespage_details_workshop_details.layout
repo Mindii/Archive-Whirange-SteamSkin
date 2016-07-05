@@ -19,8 +19,8 @@
 	{
 		workshop_description
 		{
-			textcolor="Label"
-			selectedtextcolor="Label"	
+			textcolor="Mindi2"
+			selectedtextcolor="Mindi0"	
 			render_bg {}
 			font-size=15
 			font-family=basefont

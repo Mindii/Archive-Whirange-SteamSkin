@@ -17,7 +17,7 @@
 	colors
 	{
 		// ProgressBarMarings must be the combined left+right margin of the actual bar from it's container
-		GameDetailsAchievements.ProgressBarMargins "8"
+		GameDetailsAchievements.ProgressBarMargins "1"
 		
 		Tooltip.Anchor=Parent
 	}
