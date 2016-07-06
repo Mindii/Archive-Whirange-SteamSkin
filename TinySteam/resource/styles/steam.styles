@@ -23,8 +23,8 @@ steam.styles
     darkpurple="64 0 64 255" //not modified
     
     dark_blue "2 15 23 255" //not modified
-		med_blue "255 127 0 255" //not modified
-		bg_blue "10 36 56 255" //progressbar
+	med_blue "255 127 0 255" //not modified
+	bg_blue "10 36 56 255" //progressbar
     
     // control colors
     bordercolor="153 153 153 255"
@@ -37,12 +37,10 @@ steam.styles
     basefont="Helvetica" [$OSX]
     
     // new control colors
-    ButtonFace="153 153 153 200"
     ButtonFace2="175 175 175 255" // for use in main client list panel column header, some button states
     ButtonFace3="163 163 163 255" // button cornering pixels
     ButtonFaceDisabled="153 153 153 255"
     ButtonFaceHover="156 156 156  240"   /// hover!
-    ButtonFaceActive="153 153 153  240"  // not sure what this state is...
     ButtonFaceFocus="150 150 150  240"  //  keyboard focus
     ButtonFaceActiveFocus="150 150 150  255"  // this is the default choice
     BlueBorder="180 180 180 255"
@@ -75,9 +73,25 @@ steam.styles
 	
 	// Main custom color block
 	//########################
-	MindiGameListName="0 0 0 255" 		// Gamelist Group Name
+	
+	//Main color variables
+	Mindi0="255 127 0 255"				// Dark Orange
+	Mindi="255 152 31 255"				// Orange
+	Mindi2="77 77 77 255"				// Dark Grey
+	Mindi2b="66 66 66 255"				// Dark Grey variation
+	Mindi3="240 240 240 255"			// Light Grey Listboxes
+	Mindi3b="240 240 240 255"			// Light Grey Chat BG
+	Mindi3c="184 184 184 255"			// Light Grey Chat disaple button text
+	
+	
+	MindiGameListName="77 77 77 255" 	// Gamelist Group Name
 	MindiGameList="255 255 255 255" 	// Gamelist Group BG color 1
-	MindiGameList2="255 255 255 255" 	// Gamelist Group BG color 2
+	MindiGameList2="255 255 255 2555" 	// Gamelist Group BG color 2
+	MindiGameListBG="255 255 255 255" 	// Gamelist scroll BG
+	MindiGameListRBG="240 240 240 255" 	// Gamelist main BG
+	MindiGameListSC="255 152 31 255" 	// Gamelist Scroll button BG	
+	
+	MindiScroll="255 152 31 255"		// Scrollbar bg
 	
 	MindiBorder="1 1 1 255" 			// Black Border
 	MindiBorderL="199 199 199 255"		// Light grey Border (used on main window)
@@ -89,14 +103,6 @@ steam.styles
 	MindiLink="255 152 31 255"			// Link color
 	MindiTest="192 0 255 255"			// Violet test color
 	
-	Mindi0="255 127 0 255"				// Dark Orange
-	Mindi="255 152 31 255"				// Orange
-	Mindi2="77 77 77 255"				// Dark Grey
-	Mindi2b="66 66 66 255"				// Dark Grey variation used for playtime
-	Mindi3="240 240 240 255"			// Light Grey Listboxes
-	Mindi3b="240 240 240 255"			// Light Grey Chat BG
-	Mindi3c="184 184 184 255"			// Light Grey Chat disaple button text
-	
 	MindiTab0="215 215 215 255"			// Tab normal state
 	MindiTab="Mindi"					// Tab active
 	MindiTab2="Mindi"					// Tab hover
@@ -107,19 +113,26 @@ steam.styles
 	MindiChatF="33 33 33 255"			// friend text color on chat
 	MindiChatH="Mindi3c"				// history text color on chat
 	
-	MindiListGames0="137 137 137 255"
+	MindiListGames0="137 137 137 255"	
 	MindiListGames1="49 49 49 255"
 	MindiListGames1b="0 0 0 255"
 	MindiListGames2="255 114 0 255"
 	MindiListGames2b="255 90 0 255"
 	
-	MindiMenu="255 255 255 255"		// Menu text color
-	MindiMenu2="255 255 255 255"	// Menu text color
-	MindiMenuText="Mindi2"			// Menu text color
-	MindiMenuTextH="Mindi"			// Menu text hover color
-	MindiMenuTextS="Mindi0"			// Menu text selected color
+	MindiMenu="255 255 255 255"			// Menu text color
+	MindiMenu2="255 255 255 255"		// Menu text color
+	MindiMenuText="Mindi2"				// Menu text color
+	MindiMenuTextH="255 152 31 255"		// Menu text hover color
+	MindiMenuTextS="Mindi0"				// Menu text selected color
 	
-	MindiOverlayBG="0 0 0 190"		// Black
+	MindiOverlayBG="0 0 0 190"			// Black
+	
+	MindiMBTD="77 77 77 2555"			// Mainbar text default
+	MindiMBTH="255 152 31 255"			// Mainbar text highlight
+	
+	MindiGH="40 40 40 255"				// Game header
+	MindiGI="40 40 40 255"				// Game info
+	MindiGV="116 116 116 255"			// Game info value
 	
 	launch0 "175 175 175 255"   		// Not sure what this do anymore need to check
 	launch1 "255 152 31 255"   			// Button normal state
@@ -127,16 +140,22 @@ steam.styles
 	launch3 "221 221 221 255"   		// Button normal state install/buy
 	launch4 "255 138 0 255"   			// Button on use install/buy
 	
-	BackgroundName="255 255 255 160" 	// Game name/play button area bg
-    BackgroundStart="255 255 255 220"	// Achievements, Community, News
+	BackgroundName="255 255 255 227" 	// Game name/play button area bg
+    BackgroundStart="255 255 255 244"	// Achievements, Community, News
 	
-	PropertySheet.FlashTabColor	"255 255 255 255"   //not modified
+    MindiModuleBG1="255 255 255 0"		// Achievements, Community, News
+    MindiModuleBG2="255 255 255 244"	// Achievements, Community, News
+	
+	PropertySheet.FlashTabColor	"255 255 255 255"   //Flash tab text color
+	
+	ButtonFace="Mindi"
+	ButtonFaceActive="Mindi0"  // Scrollbars on hover
 	// Block end
 	
 	
 	// check if these do anything anymore
 	BackgroundStartSubtle="255 255 255 255" 
-    BackgroundStartSubtle="255 255 255 255" [$OSX] // this is for osx what i can read if someone read this and know the osx tell me what it really do
+    BackgroundStartSubtle="255 255 255 255" [$OSX]
     BackgroundStartSubtlest="255 255 255 255"
 	BackgroundStartOpaque="255 255 255 255"
 	
@@ -669,10 +688,10 @@ steam.styles
    	 }
     
     "CheckbuttonList Checkbutton"
-    {textcolor="label"} 
+    {textcolor="Mindi2"} 
     
     "CheckbuttonList Checkbutton:focus"
-    {textcolor="texthover"} 
+    {textcolor="Mindi0"} 
     
     ComboBox
     {
@@ -2363,7 +2382,7 @@ steam.styles
 		{
 
 			//background fill
-			//2="gradient( x0 + 2, y0 + 6, x1 - 4, y0 + 200, scrollbg, none)"
+			//2="gradient( x0 + 2, y0 + 6, x1 - 4, y0 + 200, MindiScroll, none)"
 		}
     }
     
@@ -2382,7 +2401,7 @@ steam.styles
 		render_bg
 		{
 			//background fill
-			//0="gradient( x0 + 2, y0 + 6, x1 - 4, y0 + 200, scrollbg, none)"
+			//0="gradient( x0 + 2, y0 + 6, x1 - 4, y0 + 200, MindiScroll, MindiScroll)"
 		}
     }
     
@@ -2499,13 +2518,13 @@ steam.styles
       font-family=basefont
       font-size=10
       font-weight=400
-      textcolor="label"
+      textcolor="Mindi2"
       font-style=uppercase
     }
       
     Slider:focus
     {
-      textcolor="Text"  
+      textcolor="Mindi0"  
     }
     
     StatusLabel
