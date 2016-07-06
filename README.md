@@ -10,6 +10,6 @@ WIP Clean white/orange skin for steam
 
 # Screenshots
 
-![alt tag](https://raw.githubusercontent.com/Mindii/TinySteam-Skin/master/Img/tinysteam4.png)
+![alt tag](https://raw.githubusercontent.com/Mindii/TinySteam-Skin/master/Img/tinysteam5.png)
 
 ![alt tag](https://raw.githubusercontent.com/Mindii/TinySteam-Skin/master/Img/overlay.png)
