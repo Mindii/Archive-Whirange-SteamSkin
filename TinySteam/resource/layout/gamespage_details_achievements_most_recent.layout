@@ -87,6 +87,7 @@
 		place { region=body control=mostrecent_image x=5 y=10 width=64 height=64 }
 
 		place { region=body control=progressbackground y=92 width=max height=18 margin-right=44 }
-		place { region=body control=progressbarimage y=96 height=10 margin-left=4 margin-right=4 }
+		place { region=body control=progressbarimage y=94 height=14 margin-left=2 margin-right=2 }
+		//place { region=body control=progressbarimage y=96 height=11 margin-left=4 margin-right=4 }
 	}
 }
