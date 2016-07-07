@@ -5,7 +5,7 @@ WIP white/orange skin for steam
 
     1. Extract the skin to *\Steam\skins\ (Example: C:\Program Files (x86)\Steam\skins)
 
-    2. Go to Steam -> Settings -> Interface -> Select "TinySteam" from dropdown menu and restart steam
+    2. Go to Steam -> Settings -> Interface -> Select "Whirange-skin" from dropdown menu and restart steam
 
 
 # Screenshots
