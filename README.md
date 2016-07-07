@@ -1,5 +1,5 @@
-# TinySteam
-WIP Clean white/orange skin for steam
+# Whirange
+WIP white/orange skin for steam
 
 # Usage
 
