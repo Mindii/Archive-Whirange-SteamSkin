@@ -10,6 +10,6 @@ WIP white/orange skin for steam
 
 # Screenshots
 
-![alt tag](https://raw.githubusercontent.com/Mindii/Whirange/master/Img/tinysteam5.png)
+![alt tag](https://raw.githubusercontent.com/Mindii/Whirange/master/Img/Whirange.png)
 
 ![alt tag](https://raw.githubusercontent.com/Mindii/Whirange/master/Img/overlay.png)
