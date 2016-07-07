@@ -276,18 +276,26 @@
 			font-size=14
 			font-weight=400	
 			textcolor="text"
-			render_bg
-			{
+			render {
+				2="gradient_horizontal( x0, y1-1, x1, y1, MindiBorderL, MindiBorderL )"    // bottom
+				3="gradient( x1-1, y0, x1, y1 , MindiBorderL, MindiBorderL )" // right
+				4="fill( x0, y0, x1, y0+1, MindiBorderL )"  // top
+			}		
+			render_bg {
+				1="fill( x0, y0, x1, y1, Mindi3 )"
+			}
+		
+			//render_bg
+			//{
 				// background fill
-				0="fill( x0 + 1, y0 + 1, x1+1, y1, Mindi3  )"
-			}			
+			//	0="fill( x0 + 1, y0 + 1, x1+1, y1, Mindi3  )"
+			//}			
 		}
 		
 		LibrarySearch:empty
 		{
 			font-style=italic
 			textcolor="LabelDisabled"
-			
 		}
 		
 		LibrarySearch:hover
@@ -319,11 +327,14 @@
 			padding-right=-1
 			padding-top=-1
 
-			render_bg
-			{
-				// background fill
-				0="fill( x0 + 1, y0 + 1, x1+1, y1, Mindi3  )"
-			}			
+			render {
+				2="gradient_horizontal( x0, y1-1, x1+2, y1, MindiBorderL, MindiBorderL )"    // bottom
+				4="fill( x0, y0, x1+2, y0+1, MindiBorderL )"  // top
+				5="fill( x0, y0, x0+1, y1, MindiBorderL )" // left
+			}		
+			render_bg {
+				1="fill( x0, y0, x1 + 2, y1, Mindi3 )"
+			}		
 		}
 		
 		LibrarySearchIcon:disabled
