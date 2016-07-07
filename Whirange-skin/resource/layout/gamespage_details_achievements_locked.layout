@@ -20,7 +20,7 @@
 		GameDetailsAchievements.ImageWidth "45"
 
 		// Size of the border around locked achievement images
-		GameDetailsAchievements.LockedImageBorder "3"
+		GameDetailsAchievements.LockedImageBorder "1"
 
 		Tooltip.Anchor=Parent
 	}
