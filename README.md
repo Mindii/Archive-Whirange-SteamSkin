@@ -11,5 +11,7 @@ WIP white/orange skin for steam
 # Screenshots
 
 ![alt tag](https://raw.githubusercontent.com/Mindii/Whirange/master/Img/Whirange_1.png)
+Main window
 
 ![alt tag](https://raw.githubusercontent.com/Mindii/Whirange/master/Img/overlay.png)
+Ingame overlayer
