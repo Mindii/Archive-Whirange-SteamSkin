@@ -1,5 +1,5 @@
 # Whirange
-WIP white/orange skin for steam
+Consept is to make very basic, clean, white skin with orange accent color, feel free to take it and make your own changes, just one thing color variables are very messy right now. (01/27/2017) 
 
 # Usage
 
