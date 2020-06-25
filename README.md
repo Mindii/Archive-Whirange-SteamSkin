@@ -1,3 +1,6 @@
+# Old Steam UI Skin
+This is old steam skin before new chat / library updates, new one exists.
+
 # Whirange
 Consept is to make very basic, clean, white skin with orange accent color, feel free to take it and make your own changes, just one thing color variables are very messy right now. (01/27/2017) 
 
